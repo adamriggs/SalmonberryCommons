@@ -1,0 +1,67 @@
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: $blue;
+    display: block;
+    font-family: "Barlow-Extra Bold", $font-fallback;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    margin: 0;
+}
+
+.woocommerce-LoopProduct-link,
+.woocommerce-loop-product__link {
+    // flex-grow: 1;
+}
+
+.woocommerce ul.products li.product .price {
+    color: $blue;
+    font-family: "Barlow-Extra Bold", $font-fallback;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.woocommerce a.button,
+.woocommerce button.button {
+    background-color: $orange;
+    border: 1px solid $white;
+    color: $white;
+    cursor: pointer;
+    font-family: "Avenir", $font-fallback;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 14px;
+    // margin: 50px 0;
+    padding: 12px 15px;
+    text-transform: uppercase;
+    transition: background-color $transition-time, border $transition-time;
+
+    &:hover {
+        background-color: $blue;
+        border: 1px solid $blue;
+        color: $white;
+    }
+}
+
+.woocommerce-message {
+    border-top-color: $blue;
+
+    &::before {
+        color: $orange;
+    }
+}
+
+.woocommerce a.remove {
+    color: $orange !important;
+
+    &:hover {
+        background: $orange;
+    }
+}
+
+.woocommerce-page table.cart td.actions .input-text {
+    height: 40px;
+    width: 150px;
+}

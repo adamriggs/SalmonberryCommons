@@ -1,0 +1,56 @@
+{
+  "name": "bwa",
+  "version": "1.0.0",
+  "description": "Base WordPress theme for bwa",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --watch",
+    "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "eslint:fix": "eslint \"src/**/_.{js,jsx}\" --quiet --fix",
+    "format": "prettier --write \"src/**/_.{js,jsx,scss}\"",
+    "stylelint": "stylelint \"src/**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint \"src/**/_.{css,scss}\" --fix",
+    "serve": "node config/serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.6.0",
+    "sass-loader": "^7.1.0",
+    "stylelint": "^10.1.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "svg-sprite-loader": "^4.1.6",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-middleware": "^3.7.0",
+    "webpack-hot-middleware": "^2.25.0"
+  },
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "intersection-observer": "^0.7.0",
+    "swiper": "^6.4.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "IE >= 10"
+  ]
+}

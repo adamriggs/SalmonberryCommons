@@ -1,0 +1,126 @@
+.menu a {
+    @include text-menu;
+
+    transition: color $transition-time ease-in-out;
+
+    &:hover { color: $orange; }
+}
+
+.header__menu__secondary {
+    z-index: 10;
+
+    a {
+        @include text-menu-mobile;
+    }
+
+    button {
+        clip-path: none;
+        border: 0;
+    }
+
+    button:hover {
+        background-color: transparent;
+        border: 0;
+    }
+
+    .menu {
+        li {
+            display: block;
+            padding: 10px 0 5px;
+
+            &.menu-open > a {
+                text-transform: uppercase;
+            }
+
+            .sub-menu {
+                min-width: 180px;
+                padding-top: 10px;
+            }
+
+            &.menu-item-has-children > a {
+                margin-bottom: 10px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.header__menu .menu {
+    height: 56px;
+
+    ul {
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    & > ul > li {
+        align-items: center;
+        display: flex;
+        // padding: 0 5px;
+        position: relative;
+        z-index: 9;
+    }
+
+    .menu-item-has-children {
+        position: relative;
+    }
+
+    .sub-menu {
+        left: 0;
+        // margin-top: 50px;
+        opacity: 0;
+        padding-bottom: 20px;
+        position: absolute;
+        top: 50px;
+        transition: opacity $transition-time;
+        visibility: hidden;
+
+        li {
+            background-color: $white;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
+            padding: 10px 20px;
+            text-align: left;
+            width: 100%;
+
+            &:last-child {
+                border-bottom: 1px solid $black;
+            }
+
+            a { white-space: nowrap; }
+        }
+    }
+
+    .menu-open .sub-menu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media only screen and (max-width: $menu-break) {
+    .menu {
+        a {
+            font-size: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1008px) {
+    .menu {
+        a {
+            font-size: 18px;
+        }
+    }
+
+    .header__menu .menu {
+        height: 40px;
+
+        .menu-open .sub-menu {
+            top: 30px;
+        }
+    }
+}

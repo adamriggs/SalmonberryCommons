@@ -1,0 +1,53 @@
+.featured {
+    h4 {
+        margin: $spacer-less 0 24px;
+    }
+
+    .featured__title {
+        margin-bottom: $spacer-less;
+        text-transform: uppercase;
+
+        a:hover > h1 { color: $orange; }
+        span { padding-left: $spacer-less; }
+    }
+}
+
+.post__tile {
+    .background-image {
+        background-clip: border-box;
+        background-origin: border-box;
+        margin-bottom: $spacer-less;
+        padding-top: 78%;
+    }
+
+    h3 {
+        text-align: center;
+        transition: color $transition-time ease-in-out;
+    }
+
+    &:hover h3 { color: $orange; }
+}
+
+.post__row a { text-align: right; }
+.post__row h4 { margin: 40px 0; }
+
+@media only screen and (max-width: $tablet-break) {
+    .featured .featured__title {
+        a,
+        span {
+            @include flex__full;
+        }
+
+        span { padding: $spacer-less 0 0 0; }
+    }
+}
+
+@media only screen and (max-width: $mobile-break) {
+    .post__row.mobile__break {
+        .post__tile__container {
+            @include flex__full;
+
+            margin-bottom: $spacer-less;
+        }
+    }
+}

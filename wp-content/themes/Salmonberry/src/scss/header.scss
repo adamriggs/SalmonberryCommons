@@ -1,0 +1,198 @@
+header.site-header {
+    align-items: center;
+    background-color: $orange;
+    color: $white;
+    display: flex;
+    max-width: $max-width;
+
+    .header__middle {
+        background-color: $white;
+        color: $blue;
+        position: relative;
+
+        & > a {
+            border: 1px solid $blue;
+            border-bottom: none;
+            box-shadow: 0 2px 5px 0 $shadow;
+            padding: 14px $spacer;
+            z-index: 0;
+        }
+
+        .menu {
+            background-color: $white;
+            border: 1px solid $blue;
+            border-radius: 0 0 50px 50px;
+            bottom: -55px;
+            box-shadow: 0 2px 5px 0 $shadow;
+            padding: 0 $spacer;
+            position: absolute;
+            width: 100%;
+            z-index: 9;
+        }
+    }
+
+    .header__right__top {
+        padding-bottom: 8px;
+    }
+
+    .header__salmonberry {
+        width: 75%;
+    }
+
+    .header__cart {
+        img { width: 50%; }
+    }
+
+    .header__provisions {
+        width: 75%;
+    }
+
+    .header__search {
+        input[type="text"] {
+            border: none;
+            font-family: "Avenir", $font-fallback;
+            text-transform: uppercase;
+
+            &:focus {
+                border: none;
+            }
+        }
+
+        form {
+            position: relative;
+        }
+
+        img {
+            width: 6px;
+        }
+
+        svg {
+            cursor: pointer;
+            fill: $white;
+            width: $spacer-less;
+        }
+    }
+
+    .header__menu__secondary {
+        margin-bottom: 13px;
+        padding: 0;
+        position: relative;
+
+        .hamburger {
+            padding: 0 0 0;
+            &:focus { outline: 0; }
+        }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::after,
+    .hamburger-inner::before {
+        background-color: $blue;
+    }
+
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::after,
+    .hamburger.is-active .hamburger-inner::before {
+        background-color: $blue;
+    }
+
+    .hamburger.is-active:hover,
+    .hamburger:hover {
+        opacity: 1;
+
+        .hamburger-inner,
+        .hamburger-inner::after,
+        .hamburger-inner::before {
+            background-color: $orange;
+        }
+    }
+
+    .header__mobile {
+        background-color: $white;
+        display: none;
+
+        & > h1 {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        #menu__mobile {
+            box-shadow: 0 2px 5px 0 $shadow;
+            opacity: 0;
+            padding-bottom: $spacer-less;
+            visibility: hidden;
+            background-color: $white;
+            padding: 0 32px;
+            position: absolute;
+            right: 0;
+            transition: opacity 0.25s;
+
+            &.show {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .menu > ul > li > a {
+                border-bottom: 1px solid $blue;
+            }
+
+            .search__mobile {
+                cursor: pointer;
+                padding-top: $spacer-less;
+                img { width: 20px; }
+            }
+
+            .header__cart {
+                cursor: pointer;
+                opacity: 0;
+                padding-top: $spacer-less;
+                transition: opacity $transition-time;
+                visibility: hidden;
+                img { width: 20px; }
+
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .cart-item-total {
+                    color: $blue;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $menu-break) {
+    header.site-header {
+        .header__middle {
+            & > a {
+                padding: 14px $spacer-less;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1008px) {
+    header.site-header {
+        .header__middle {
+            .menu {
+                bottom: -40px;
+                padding: 0 $spacer-less;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $menu-mobile-break) {
+    header.site-header {
+        .header__desktop {
+            display: none;
+        }
+
+        .header__mobile {
+            display: flex;
+        }
+    }
+}

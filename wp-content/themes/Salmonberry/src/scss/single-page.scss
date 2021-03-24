@@ -1,0 +1,36 @@
+.single-page {
+    section {
+        margin: $spacer-more 0;
+    }
+
+    h1 {
+        padding-bottom: 20px;
+    }
+
+    .col-3 {
+        padding: 0 $spacer;
+
+        img {
+            background-size: contain;
+        }
+    }
+}
+
+@media only screen and (max-width: $menu-mobile-break) {
+    .single-page {
+        section { margin: $spacer 0; }
+
+        .row {
+            flex-direction: column-reverse;
+        }
+
+        .col-3,
+        .col-6 {
+            @include flex__full;
+
+            padding: 0 $spacer-less;
+        }
+
+        .col-3 img { display: none; }
+    }
+}

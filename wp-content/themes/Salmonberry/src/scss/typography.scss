@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Avenir Next Condensed";
+    src: url("../src/fonts/Avenir Next Condensed.ttc");
+}
+
+@font-face {
+    font-family: "Avenir";
+    src: url("../src/fonts/Avenir.ttc");
+}
+
+@font-face {
+    font-family: "Barlow-Extra Bold";
+    src: url("../src/fonts/Barlow-Extra Bold.ttf");
+}
+
+@font-face {
+    font-family: "Druk Medium";
+    src: url("../src/fonts/Druk Medium.otf");
+}
+
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../src/fonts/MyriadPro-Regular.otf");
+}
+
+$font-fallback: Arial, sans-serif;
+$font-menu: "Druk Medium", $font-fallback;
+
+@mixin text-menu {
+    color: $blue;
+    font-family: $font-menu;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: color $transition-time ease-in-out;
+
+    &:hover {
+        color: $orange;
+    }
+}
+
+@mixin text-menu-mobile {
+    font-family: $font-menu;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+@mixin text-menu-footer {
+    color: $blue;
+    font-family: $font-menu;
+    font-size: 18px;
+    text-transform: uppercase;
+}
