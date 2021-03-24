@@ -36,21 +36,21 @@
                             $product_status = "out-of-stock";
                         }
 
-                        $servings = get_field('servings');
+                        $quantity = get_field('quantity');
                         $producers = get_field('producers');
                         $delivery = get_field('delivery_pickup');
 
-                        // echo('<pre>');
-                        // print_r($producers);
-                        // echo('</pre>');
+                        echo('<pre>');
+                        print_r($quantity);
+                        echo('</pre>');
                     ?>
                     
                     <div class="product__image col-6 background__image" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"></div>
                     
                     <div class="product__text col-6">
                         <h1><?php the_title(); ?></h1>
-                        <?php if(!$servings == ('0' || '')) { ?>
-                            <div><h3 class="blue">SERVES <?php echo $servings; ?></h3></div>
+                        <?php if($quantity) { ?>
+                            <div><h3 class="blue"><?php echo $quantity; ?></h3></div>
                         <?php } ?>
 
                         <?php if($producers && count($producers) > 0) { ?>
