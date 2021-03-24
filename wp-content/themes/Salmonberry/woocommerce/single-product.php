@@ -54,7 +54,7 @@
                         <?php } ?>
 
                         <?php if($producers && count($producers) > 0) { ?>
-                            <div><p>From 
+                            <div><p>Featuring Ingredients From 
                                 <?php
                                     $i = count($producers) - 1;
                                     foreach($producers as $producer) { 
