@@ -1275,6 +1275,10 @@ footer {
     .home__tertiary__row .col-3 h5 {
       cursor: pointer;
       margin-bottom: 18px; }
+    .home__tertiary__row .col-3 .product__row__button {
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      width: 100%; }
     .home__tertiary__row .col-3 .product__row__add__container {
       width: 100%; }
     .home__tertiary__row .col-3 .product__row__add {
@@ -1524,7 +1528,8 @@ footer {
       color: #f38134; }
   .product__tile .product__buttons {
     -ms-flex-item-align: end;
-        align-self: end; }
+        align-self: flex-end;
+    width: 100%; }
     .product__tile .product__buttons h4 {
       text-align: center; }
     .product__tile .product__buttons .product__tile__cart.out-of-stock {

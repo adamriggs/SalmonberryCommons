@@ -25,7 +25,7 @@
     // echo('</pre>');
 ?>
 
-<div class="product__tile">
+<div class="product__tile row">
     <a class="product__tile__link" href="<?php echo $product_url; ?>">
         <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"><?php the_excerpt(); ?></div>
         

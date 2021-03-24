@@ -46,13 +46,14 @@
                 $product_url = get_permalink( get_the_id() );
                 $product_id = $product->get_id();
         ?>
-                <div class="col-3">
+                <div class="col-3 row">
                     <a href="<?php echo get_permalink(); ?>">
                         <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"><?php the_excerpt(); ?></div>
                         <h5 class="product__row"><?php echo get_the_title(); ?></h5>
                     </a>
-                    <h5 class="product__row center"><?php echo '$' . $product->get_price(); ?></h5>
-                    <div class="center">
+                    
+                    <div class="product__row__button center">
+                        <h5 class="product__row center"><?php echo '$' . $product->get_price(); ?></h5>
                         <h5 class="product__row__add add-one-item <?php echo $button_class; ?>" data-product-id="<?php echo $product_id ?>"><?php echo $button_text; ?></h5>
                         <span data-product-id="<?php echo $product_id ?>"class="product__text__add__success">+1</span>
                         <span data-product-id="<?php echo $product_id ?>"class="product__text__add__progress">

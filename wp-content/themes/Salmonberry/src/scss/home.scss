@@ -99,6 +99,11 @@
             margin-bottom: $spacer-less;
         }
 
+        .product__row__button {
+            align-self: flex-end;
+            width: 100%;
+        }
+
         .product__row__add__container {
             width: 100%;
         }
