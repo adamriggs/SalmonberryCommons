@@ -45,7 +45,9 @@
                         echo('</pre>');
                     ?>
                     
-                    <div class="product__image col-6 background__image" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"></div>
+                    <div class="product__image col-6 background__image">
+                        <?php echo the_post_thumbnail(); ?>
+                    </div>
                     
                     <div class="product__text col-6">
                         <h1><?php the_title(); ?></h1>
