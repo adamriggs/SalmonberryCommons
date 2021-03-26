@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayRegion() {
         for (let display of regionDisplayText) {
             const str = region.split('-').join(' ');
-            const textNode = document.createTextNode('Location: ' + str);
+            const textNode = document.createTextNode('Delivery Zones: ' + str);
             display.innerHTML = '';
             display.prepend(textNode);
         }
