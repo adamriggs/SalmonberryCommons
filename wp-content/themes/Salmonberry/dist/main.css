@@ -801,7 +801,8 @@ header.site-header {
   height: 100vh;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
-  max-width: 1200px; }
+  max-width: 1200px;
+  width: 100%; }
   .region__selection .region__selection__container {
     background-color: #fff;
     border: 1px solid #4e81c2;

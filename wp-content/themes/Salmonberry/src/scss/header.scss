@@ -190,6 +190,7 @@ header.site-header {
     height: 100vh;
     transition: opacity $transition-time;
     max-width: $max-width;
+    width: 100%;
 
     .region__selection__container {
         background-color: $white;
