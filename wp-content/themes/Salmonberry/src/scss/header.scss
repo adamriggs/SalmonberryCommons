@@ -27,7 +27,7 @@ header.site-header {
             padding: 0 $spacer;
             position: absolute;
             width: 100%;
-            z-index: 9;
+            z-index: 0;
         }
     }
 
@@ -109,11 +109,17 @@ header.site-header {
 
     .header__mobile {
         background-color: $white;
+        color: $blue;
         display: none;
 
         & > h1 {
             flex-basis: 100%;
             max-width: 100%;
+        }
+
+        .region__display {
+            span,
+            a { display: inline-block; }
         }
 
         #menu__mobile {
@@ -164,6 +170,66 @@ header.site-header {
     }
 }
 
+.region__display {
+    a {
+        display: block;
+        text-decoration: underline;
+    }
+
+    span {
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.region__selection {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $orange;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    transition: opacity $transition-time;
+    max-width: $max-width;
+
+    .region__selection__container {
+        background-color: $white;
+        border: 1px solid $blue;
+        margin-top: 20vh;
+        padding: $spacer-less;
+    }
+
+    .region__option {
+        border: 1px solid $orange;
+        margin: $spacer-less;
+        padding: $spacer-less;
+    }
+
+    .region__option__text {
+        align-self: flex-start;
+
+        h1 { margin-bottom: $spacer-less; }
+    }
+
+    .region__option__button__container {
+        align-self: flex-end;
+        margin-top: $spacer-less;
+        text-align: center;
+        width: 100%;
+    }
+
+    .region__option__text {
+        width: 100%;
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+
+    &.remove {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: $menu-break) {
     header.site-header {
         .header__middle {
@@ -194,5 +260,19 @@ header.site-header {
         .header__mobile {
             display: flex;
         }
+
+        .region__option.col-4 {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
     }
 }
+
+// @media only screen and (max-width: $mobile-break) {
+//     header.site-header {
+//         .region__option.col-4 {
+//             flex-basis: 100%;
+//             max-width: 100%;
+//         }
+//     }
+// }

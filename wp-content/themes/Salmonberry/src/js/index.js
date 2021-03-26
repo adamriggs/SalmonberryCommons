@@ -1,8 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-lonely-if */
 /* eslint-disable no-console */
+/* eslint-disable no-loop-func */
 import 'intersection-observer';
 import anime from 'animejs/lib/anime.es.js';
+import { getCookie } from './helpers.js';
+import { setCookie } from './helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // ANIMATIONS
@@ -102,4 +105,67 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // REGION STUFF
+    const cookieName = 'salmonberry_region';
+    const regionDialog = document.getElementsByClassName('region__selection');
+    const regionButtons = document.getElementsByClassName('region__option__button');
+    const regionDisplay = document.getElementsByClassName('region__display');
+    const regionDisplayText = document.getElementsByClassName('region__display__text');
+    const regionChange = document.getElementsByClassName('region__display__change');
+    let region = getCookie(cookieName);
+
+    // set up event for removing region dialog from the screen
+    for (let dialog of regionDialog) {
+        dialog.addEventListener('transitionend', () => {
+            if (dialog.classList.contains('hide')) {
+                dialog.classList.add('remove');
+            }
+        });
+    }
+
+    // load region from cookie, if any
+    if (region === '') {
+        for (let dialog of regionDialog) {
+            dialog.classList.remove('hide');
+            dialog.classList.remove('remove');
+        }
+    } else {
+        displayRegion();
+    }
+
+    // set region cookie based on button click
+    for (let button of regionButtons) {
+        button.addEventListener('click', () => {
+            region = button.dataset.region;
+            if (setCookie('salmonberry_region', button.dataset.region, 30)) {
+                for (let dialog of regionDialog) {
+                    dialog.classList.add('hide');
+                }
+                displayRegion();
+            }
+        });
+    }
+
+    // change the region at user request
+    for (let change of regionChange) {
+        change.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+
+            for (let dialog of regionDialog) {
+                dialog.classList.remove('remove');
+                dialog.classList.remove('hide');
+            }
+        });
+    }
+
+    function displayRegion() {
+        for (let display of regionDisplayText) {
+            const str = region.split('-').join(' ');
+            const textNode = document.createTextNode('Location: ' + str);
+            display.innerHTML = '';
+            display.prepend(textNode);
+        }
+    }
 });

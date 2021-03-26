@@ -27,6 +27,10 @@
         <div class="header__desktop row middle col-12">
             <div class="header__left col-2 middle">
                 <img src="<?php echo get_template_directory_uri() . '/images/sun-white.png'; ?>" />
+                <div class="region__display">
+                    <span class="region__display__text"></span>
+                    <a href="" class="region__display__change">Change</a>
+                </div>
             </div>
             <div class="header__middle header__menu row col-8 middle">
                 <a href="/" title="Salmonberry Common" class="col-12">
@@ -100,6 +104,47 @@
                         'container_id' => ''
                     )); ?>
                 </div>
+            </div>
+            <div class="region__display">
+                                <span class="region__display__text"></span>
+                                <a href="" class="region__display__change">Change</a>
+                            </div>
+        </div>
+
+        <div class="region__selection hide remove">
+            <div class="region__selection__container row center">
+                <div class="region__selection__title">
+                    <h1>Where are you located?</h1>
+                </div>
+                <section class="row center">
+                    <?php
+                        $args = array(
+                            'post_type'     => 'delivery-regions',
+                            'post_status'   => 'publish'
+                        );
+
+                        $loop = new WP_Query( $args );
+
+                        if (have_posts()) : while ( $loop->have_posts() ) : $loop->the_post();
+
+                    ?>
+
+                        <div class="region__option row col-4 middle">
+                            <div class="region__option__text">
+                                <h1><?php the_title(); ?></h1>
+                                <?php the_content(); ?>
+                            </div>
+                            <div class="region__option__button__container">
+                                <button data-region="<?php echo $post->post_name; ?>" class="region__option__button">Choose</button>
+                            </div>
+                        </div>
+
+                    <?php
+                        endwhile;
+                        endif;
+                        wp_reset_query();
+                    ?>
+                </section>
             </div>
         </div>
     </header>

@@ -687,7 +687,7 @@ header.site-header {
       padding: 0 44px;
       position: absolute;
       width: 100%;
-      z-index: 9; }
+      z-index: 0; }
   header.site-header .header__right__top {
     padding-bottom: 8px; }
   header.site-header .header__salmonberry {
@@ -738,11 +738,15 @@ header.site-header {
       background-color: #f38134; }
   header.site-header .header__mobile {
     background-color: #fff;
+    color: #4e81c2;
     display: none; }
     header.site-header .header__mobile > h1 {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
       max-width: 100%; }
+    header.site-header .header__mobile .region__display span,
+    header.site-header .header__mobile .region__display a {
+      display: inline-block; }
     header.site-header .header__mobile #menu__mobile {
       -webkit-box-shadow: 0 2px 5px 0 #888;
               box-shadow: 0 2px 5px 0 #888;
@@ -781,6 +785,50 @@ header.site-header {
           color: #4e81c2;
           font-size: 12px; }
 
+.region__display a {
+  display: block;
+  text-decoration: underline; }
+
+.region__display span {
+  display: block;
+  text-transform: capitalize; }
+
+.region__selection {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #f38134;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+  max-width: 1200px; }
+  .region__selection .region__selection__container {
+    background-color: #fff;
+    border: 1px solid #4e81c2;
+    margin-top: 20vh;
+    padding: 18px; }
+  .region__selection .region__option {
+    border: 1px solid #f38134;
+    margin: 18px;
+    padding: 18px; }
+  .region__selection .region__option__text {
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+    .region__selection .region__option__text h1 {
+      margin-bottom: 18px; }
+  .region__selection .region__option__button__container {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    margin-top: 18px;
+    text-align: center;
+    width: 100%; }
+  .region__selection .region__option__text {
+    width: 100%; }
+  .region__selection.hide {
+    opacity: 0; }
+  .region__selection.remove {
+    display: none; }
+
 @media only screen and (max-width: 1124px) {
   header.site-header .header__middle > a {
     padding: 14px 18px; } }
@@ -796,7 +844,11 @@ header.site-header {
   header.site-header .header__mobile {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  header.site-header .region__option.col-4 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; } }
 
 .menu a {
   color: #4e81c2;

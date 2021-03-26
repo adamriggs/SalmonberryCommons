@@ -63,6 +63,21 @@ function create_post_types() {
             'supports' => array('title', 'editor', 'thumbnail'),
         )
     );
+
+  register_post_type('delivery-regions',
+        array(
+            'labels' => array(
+                'name' => __('Delivery Regions'),
+                'singular_name' => __('Delivery Region')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array(
+                'slug' => 'delivery-regions'
+            ),
+            'supports' => array('title', 'editor'),
+        )
+    );
 }
 
 add_action( 'init', 'create_post_types' );
