@@ -1433,9 +1433,11 @@ footer {
     visibility: hidden;
     -webkit-transition: opacity 0.25s;
     transition: opacity 0.25s; }
-  .product__image:hover p {
-    opacity: 1;
-    visibility: visible; }
+  .product__image:hover {
+    background-color: #4e81c2; }
+    .product__image:hover p {
+      opacity: 1;
+      visibility: visible; }
 
 .product__text {
   padding-right: 120px; }

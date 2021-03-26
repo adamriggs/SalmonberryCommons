@@ -6,7 +6,7 @@ add_theme_support( 'title-tag' );
 
 add_action('wp_enqueue_scripts', 'main_load_scripts');
 function main_load_scripts() {
-	if ( !is_admin() ) wp_deregister_script('jquery');
+	// if ( !is_admin() ) wp_deregister_script('jquery');
 	wp_enqueue_style('main', get_template_directory_uri() . '/dist/main.css?v=' . time());
 	wp_enqueue_style('hamburger', get_template_directory_uri() . '/dist/hamburger.css?v=' . time());
 	wp_enqueue_script('main', get_template_directory_uri() . '/dist/main-bundle.js', [], time());
