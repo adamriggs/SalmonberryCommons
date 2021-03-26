@@ -28,7 +28,7 @@
             <div class="header__left col-2 middle">
                 <img src="<?php echo get_template_directory_uri() . '/images/sun-white.png'; ?>" />
                 <div class="region__display">
-                    <span class="region__display__text">Delivery Zones: At Large</span>
+                    <span class="region__display__text">Delivery Zone: At Large</span>
                     <a href="" class="region__display__change">Change</a>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="region__display">
-                <span class="region__display__text">Delivery Zones: At Large</span>
+                <span class="region__display__text">Delivery Zone: At Large</span>
                 <a href="" class="region__display__change">Change</a>
             </div>
         </div>
