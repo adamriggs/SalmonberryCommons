@@ -493,7 +493,8 @@ h5 {
 
 p,
 a {
-  font-size: 15px; }
+  font-size: 15px;
+  line-height: 18px; }
   p strong,
   a strong {
     font-weight: 800; }
@@ -1322,6 +1323,7 @@ footer {
     max-width: 24%; }
     .home__tertiary__row .col-3 a .product__image {
       height: 228px;
+      margin-bottom: 10px;
       padding: 0; }
     .home__tertiary__row .col-3 a:hover h5 {
       color: #f38134; }
