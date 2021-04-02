@@ -1490,19 +1490,32 @@ footer {
 
 .product__image {
   height: 308px;
-  padding: 0 44px 0 120px; }
-  .product__image div {
+  padding: 0 44px 0 120px;
+  position: relative; }
+  .product__image .product__text {
     background-color: #fff;
     padding: 10px 0;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity 0.25s;
-    transition: opacity 0.25s; }
+    transition: opacity 0.25s;
+    z-index: 9; }
+  .product__image .product__image__overlay {
+    opacity: 0; }
   .product__image:hover {
     background-color: #4e81c2; }
-    .product__image:hover div {
+    .product__image:hover .product__text {
       opacity: 1;
       visibility: visible; }
+    .product__image:hover .product__image__overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      opacity: 0.3;
+      padding: 0;
+      -webkit-transition: opacity 0.25s;
+      transition: opacity 0.25s; }
 
 .product__text {
   padding-right: 120px; }

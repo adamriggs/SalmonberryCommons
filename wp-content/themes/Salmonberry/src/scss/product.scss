@@ -32,8 +32,9 @@
 .product__image {
     height: 308px;
     padding: 0 $spacer 0 $spacer-more;
+    position: relative;
 
-    div {
+    .product__text {
         background-color: $white;
         // height: 100%;
         padding: 10px 0;
@@ -41,14 +42,29 @@
         visibility: hidden;
         transition: opacity $transition-time;
         // transition-delay: $transition-time;
+        z-index: 9;
+    }
+
+    .product__image__overlay {
+        opacity: 0;
     }
 
     &:hover {
         background-color: $blue;
 
-        div {
+        .product__text {
             opacity: 1;
             visibility: visible;
+        }
+
+        .product__image__overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $black;
+            opacity: 0.3;
+            padding: 0;
+            transition: opacity $transition-time;
         }
     }
 }
