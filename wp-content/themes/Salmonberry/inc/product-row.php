@@ -55,10 +55,21 @@
                 $product = wc_get_product( get_the_id() );
                 $product_url = get_permalink( get_the_id() );
                 $product_id = $product->get_id();
+                $excerpt = get_the_excerpt();
+                $excerpt = str_replace("&nbsp;", ' ', $excerpt);
+                $excerpt = trim($excerpt);
         ?>
                 <div class="col-3 row">
                     <a href="<?php echo get_permalink(); ?>">
-                        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"><?php the_excerpt(); ?></div>
+                        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
+                            <div class="product__image__overlay"></div>
+                            <?php
+                                if($excerpt != '') {
+                                    echo "<div class='product__text__overlay'>" . $excerpt . "</div>";
+                                }
+                            ?>
+                                
+                        </div>
                         <h5 class="product__row"><?php echo get_the_title(); ?></h5>
                     </a>
                     
