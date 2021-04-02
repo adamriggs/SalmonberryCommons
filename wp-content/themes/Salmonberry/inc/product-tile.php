@@ -12,6 +12,7 @@
     $cart_item_quantities = WC()->cart->get_cart_item_quantities();
     $cart_item_quantity = isset($cart_item_quantities[$product_id]) ? $cart_item_quantities[$product_id] : '0';
     $excerpt = trim(get_the_excerpt());
+    $excerpt = str_replace("&nbsp;", ' ', $excerpt);
 
     $button_class = "";
     global $product;
