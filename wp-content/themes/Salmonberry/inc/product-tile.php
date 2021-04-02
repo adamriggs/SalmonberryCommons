@@ -11,6 +11,7 @@
     $cart_item_key = WC()->cart->find_product_in_cart($cart_id);
     $cart_item_quantities = WC()->cart->get_cart_item_quantities();
     $cart_item_quantity = isset($cart_item_quantities[$product_id]) ? $cart_item_quantities[$product_id] : '0';
+    $excerpt = get_the_excerpt();
 
     $button_class = "";
     global $product;
@@ -25,7 +26,14 @@
 
 <div class="product__tile row">
     <a class="product__tile__link" href="<?php echo $product_url; ?>">
-        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"><?php the_excerpt(); ?></div>
+        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
+            <?php
+                if($excerpt != '') {
+                    the_excerpt();
+                }
+            ?>
+                
+        </div>
         
         <div class="product__text">
             <h3 class="product__row"><?php the_title(); ?></h3>

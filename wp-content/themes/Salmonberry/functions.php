@@ -181,7 +181,6 @@ add_action('wp_ajax_salmonberry_add_to_cart', 'salmonberry_add_to_cart');
 add_action('wp_ajax_nopriv_salmonberry_add_to_cart', 'salmonberry_add_to_cart');
 
 function new_excerpt_more($more) {
-    // return ' <a href="' . get_permalink() . '">Read more</a>';
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
