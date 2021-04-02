@@ -176,13 +176,18 @@
 }
 
 @media only screen and (max-width: $menu-mobile-break) {
-    .home__primary > div {
-        flex-basis: 50%;
-        max-width: 50%;
+    .home__primary .col-3 {
+        flex-basis: 33%;
+        max-width: 33%;
+    }
+
+    .home__primary .col-9 {
+        flex-basis: 66%;
+        max-width: 66%;
     }
 
     .home__primary__image {
-        background-size: 50%;
+        background-size: 66%;
     }
 
     .home__secondary__step__container {
@@ -193,12 +198,28 @@
         flex-basis: 50%;
         margin-bottom: $spacer;
         max-width: 49%;
+
+        a {
+            width: 100%;
+        }
     }
 }
 
 @media only screen and (max-width: $mobile-break) {
-    .home__primary > div {
+    // .home__primary > div {
+    //     @include flex__full;
+    // }
+
+    .home__primary .col-3 {
         @include flex__full;
+    }
+
+    .home__primary .col-9 {
+        @include flex__full;
+    }
+
+    .home__primary__image {
+        background-size: 100%;
     }
 
     .home__primary__image {
