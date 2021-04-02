@@ -1491,7 +1491,7 @@ footer {
 .product__image {
   height: 308px;
   padding: 0 44px 0 120px; }
-  .product__image p {
+  .product__image div {
     background-color: #fff;
     padding: 10px 0;
     opacity: 0;
@@ -1500,7 +1500,7 @@ footer {
     transition: opacity 0.25s; }
   .product__image:hover {
     background-color: #4e81c2; }
-    .product__image:hover p {
+    .product__image:hover div {
       opacity: 1;
       visibility: visible; }
 
