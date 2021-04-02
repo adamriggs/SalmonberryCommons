@@ -186,6 +186,11 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+function custom_excerpt_length( $length ) {
+    return 40;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 // function winwar_first_sentence( $string ) {
  
 //     $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
