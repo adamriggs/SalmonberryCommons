@@ -190,6 +190,15 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+add_filter( 'woocommerce_return_to_shop_redirect', 'st_woocommerce_shop_url' );
+/**
+ * Redirect WooCommerce Shop URL
+ */
+
+function st_woocommerce_shop_url(){
+    return site_url();
+}
+
 // function winwar_first_sentence( $string ) {
  
 //     $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );
