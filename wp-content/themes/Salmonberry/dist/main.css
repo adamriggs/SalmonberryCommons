@@ -803,7 +803,8 @@ header.site-header {
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
   max-width: 1200px;
-  width: 100%; }
+  width: 100%;
+  z-index: 9; }
   .region__selection .region__selection__container {
     background-color: #fff;
     border: 1px solid #4e81c2;

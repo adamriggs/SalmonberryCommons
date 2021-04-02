@@ -191,6 +191,7 @@ header.site-header {
     transition: opacity $transition-time;
     max-width: $max-width;
     width: 100%;
+    z-index: 9;
 
     .region__selection__container {
         background-color: $white;
