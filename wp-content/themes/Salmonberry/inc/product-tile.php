@@ -12,11 +12,9 @@
     $cart_item_quantities = WC()->cart->get_cart_item_quantities();
     $cart_item_quantity = isset($cart_item_quantities[$product_id]) ? $cart_item_quantities[$product_id] : '0';
 
-    // $button_text = "Add to Cart";
     $button_class = "";
     global $product;
     if ( ! $product->managing_stock() && ! $product->is_in_stock() ) {
-        // $button_text = "Out of Stock";
         $button_class = "out-of-stock";
     }
 

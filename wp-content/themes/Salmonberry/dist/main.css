@@ -688,7 +688,7 @@ header.site-header {
       padding: 0 44px;
       position: absolute;
       width: 100%;
-      z-index: 0; }
+      z-index: 1; }
   header.site-header .header__right__top {
     padding-bottom: 8px; }
   header.site-header .header__salmonberry {
@@ -1283,6 +1283,8 @@ footer {
 
 .home__primary__image {
   background-attachment: fixed;
+  background-size: 75%;
+  background-position: right;
   height: 513px; }
 
 .home__secondary h1 {

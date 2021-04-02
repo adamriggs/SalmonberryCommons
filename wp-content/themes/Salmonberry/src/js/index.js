@@ -143,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     dialog.classList.add('hide');
                 }
                 displayRegion();
+                location.reload();
             }
         });
     }

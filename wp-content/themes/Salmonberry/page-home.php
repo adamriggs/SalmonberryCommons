@@ -43,7 +43,10 @@
             </div>
 
             <div class="col-9">
-                <div class="home__primary__image background__image" style="background-image: url(<?php echo $hero_image_desktop; ?>)"></div>
+                <!-- <div style="width: 100%; height: 513px;"> -->
+                    <!-- style="background-image: url(<?php echo $hero_image_desktop; ?>)" -->
+                    <div class="home__primary__image background__image" style="background-image: url(<?php echo $hero_image_desktop; ?>)"><!-- <img src="<?php echo $hero_image_desktop; ?>"> --></div>
+                <!-- </div> -->
             </div>
 
         </section>

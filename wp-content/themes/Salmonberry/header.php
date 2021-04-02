@@ -125,6 +125,10 @@
 
                         $loop = new WP_Query( $args );
 
+                        // echo('<pre>');
+                        // print_r($loop);
+                        // echo('</pre>');
+
                         if (have_posts()) : while ( $loop->have_posts() ) : $loop->the_post();
 
                     ?>

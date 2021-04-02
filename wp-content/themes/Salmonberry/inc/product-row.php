@@ -25,11 +25,21 @@
     </div>
 
     <div class="row between">
-        <?php  
+        <?php
+            $cur_region = '';
+            if(isset($_COOKIE['salmonberry_region'])) {
+                $cur_region = $_COOKIE['salmonberry_region'];
+            } else {
+                
+            }
+
             $args = array(
                 'post_type'      => 'product',
                 'posts_per_page' => 4,
-                'product_cat'    => $cat_slug
+                'product_cat'    => $cat_slug,
+                // 'meta_key'      => 'delivery_region',
+                // 'meta_value'    => $cur_region,
+                // 'meta_compare'  => 'LIKE'
             );
 
             $loop = new WP_Query( $args );

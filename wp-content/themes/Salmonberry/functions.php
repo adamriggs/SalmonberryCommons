@@ -194,3 +194,31 @@ add_filter('excerpt_more', 'new_excerpt_more');
 //     return $part1 . $part2;
  
 // } add_filter( 'get_the_excerpt', 'winwar_first_sentence', 10, 1 );
+
+// add_action( 'pre_get_posts', 'custom_query_vars' );
+// function custom_query_vars( $query ) {
+//     // if ( get_post_type() == 'product' ) {
+
+//     $cur_region = '';
+//     if(isset($_COOKIE['salmonberry_region'])) {
+//         $cur_region = $_COOKIE['salmonberry_region'];
+//     }
+
+//     if ( !is_admin() && $query->is_main_query() ) {
+//         $args = array(
+//             'relation' => 'OR',
+//             array(
+//                 'meta_key'  => 'delivery_region',
+//                 'value'     => $cur_region,
+//                 'compare'   => 'LIKE'
+//             ),
+//             array(
+//                 'meta_key'  => 'delivery_region',
+//                 // 'value'     => '',
+//                 'compare'   => 'NOT EXISTS'
+//             ),
+//         );
+//         $query->set( 'meta_query', $args ); 
+//     }
+//     return $query;
+// }
