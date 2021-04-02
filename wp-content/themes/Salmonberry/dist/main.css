@@ -1492,7 +1492,7 @@ footer {
   height: 308px;
   padding: 0 44px 0 120px;
   position: relative; }
-  .product__image .product__text {
+  .product__image .product__text__overlay {
     background-color: #fff;
     padding: 10px 0;
     opacity: 0;
@@ -1504,7 +1504,7 @@ footer {
     opacity: 0; }
   .product__image:hover {
     background-color: #4e81c2; }
-    .product__image:hover .product__text {
+    .product__image:hover .product__text__overlay {
       opacity: 1;
       visibility: visible; }
     .product__image:hover .product__image__overlay {

@@ -32,7 +32,7 @@
             <div class="product__image__overlay"></div>
             <?php
                 if($excerpt != '') {
-                    echo "<div class='product__text'>" . $excerpt . "</div>";
+                    echo "<div class='product__text__overlay'>" . $excerpt . "</div>";
                 }
             ?>
         </div>

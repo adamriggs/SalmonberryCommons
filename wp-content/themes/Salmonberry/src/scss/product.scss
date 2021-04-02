@@ -34,7 +34,7 @@
     padding: 0 $spacer 0 $spacer-more;
     position: relative;
 
-    .product__text {
+    .product__text__overlay {
         background-color: $white;
         // height: 100%;
         padding: 10px 0;
@@ -52,7 +52,7 @@
     &:hover {
         background-color: $blue;
 
-        .product__text {
+        .product__text__overlay {
             opacity: 1;
             visibility: visible;
         }
