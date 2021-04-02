@@ -30,13 +30,15 @@
                     <div class="footer__email col-6 end"><a href="hello@salmonberrycommons.com">Customer service: hello@salmonberrycommons.com</a></div>
                     <div class="menu row middle footer__row2">
                         <div class="col-10">
-                            <?php wp_nav_menu(array(
-                                'menu' => 'questions',
-                                'container' => 'nav',
-                                'container_class' => 'menu',
-                                'container_id' => '',
-                                'menu_class' => 'row between'
-                            )); ?>
+                            <?php 
+                                // wp_nav_menu(array(
+                                //     'menu' => 'questions',
+                                //     'container' => 'nav',
+                                //     'container_class' => 'menu',
+                                //     'container_id' => '',
+                                //     'menu_class' => 'row between'
+                                // )); 
+                            ?>
                         </div>
                         <div class="col-2 end">
                             <?php include get_template_directory() . '/inc/social.php'; ?>

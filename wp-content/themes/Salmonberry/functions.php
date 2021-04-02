@@ -197,14 +197,33 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 // add_action( 'pre_get_posts', 'custom_query_vars' );
 // function custom_query_vars( $query ) {
-//     // if ( get_post_type() == 'product' ) {
+//     if ( is_admin() ) {
+//         return $query;
+//     }
 
 //     $cur_region = '';
 //     if(isset($_COOKIE['salmonberry_region'])) {
 //         $cur_region = $_COOKIE['salmonberry_region'];
 //     }
 
-//     if ( !is_admin() && $query->is_main_query() ) {
+//     // if ( is_post_type_archive( 'product' ) ) {
+//     //     $args = array(
+//     //         // 'relation' => 'OR',
+//     //         array(
+//     //             'meta_key'  => 'delivery_region',
+//     //             'value'     => $cur_region,
+//     //             'compare'   => 'LIKE'
+//     //         ),
+//     //         // array(
+//     //         //     'meta_key'  => 'delivery_region',
+//     //         //     // 'value'     => '',
+//     //         //     'compare'   => '!='
+//     //         // ),
+//     //     );
+//     //     $query->set( 'meta_query', $args ); 
+//     // }
+
+//     if( ( isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == 'product' ) || ( isset($query->query_vars['is_archive']) && $query->query_vars['post_type'] == 'product' ) ) {
 //         $args = array(
 //             'relation' => 'OR',
 //             array(
@@ -215,10 +234,15 @@ add_filter('excerpt_more', 'new_excerpt_more');
 //             array(
 //                 'meta_key'  => 'delivery_region',
 //                 // 'value'     => '',
-//                 'compare'   => 'NOT EXISTS'
+//                 'compare'   => '!='
 //             ),
 //         );
 //         $query->set( 'meta_query', $args ); 
+
+//         // $query->set('orderby', 'meta_value');
+//         // $query->set('meta_key', 'delivery_region');
+//         // $query->set('meta_value', $cur_region);
+//         // $query->set('meta_compare', 'LIKE');
 //     }
 //     return $query;
 // }
