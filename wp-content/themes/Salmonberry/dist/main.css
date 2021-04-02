@@ -1283,8 +1283,8 @@ footer {
 
 .home__primary__image {
   background-attachment: fixed;
-  background-size: 75%;
-  background-position: right;
+  background-size: 74%;
+  background-position: right center;
   height: 513px; }
 
 .home__secondary h1 {
@@ -1390,6 +1390,8 @@ footer {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     max-width: 50%; }
+  .home__primary__image {
+    background-size: 50%; }
   .home__secondary__step__container {
     margin: 0 44px; }
   .home__tertiary__row .col-3 {
@@ -1403,6 +1405,8 @@ footer {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
+  .home__primary__image {
+    background-size: 100%; }
   .home__secondary__step__container {
     margin: 0 18px; }
     .home__secondary__step__container .col-4 {
