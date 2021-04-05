@@ -34,6 +34,11 @@
     padding: 0 $spacer 0 $spacer-more;
     position: relative;
 
+    img {
+        max-height: 100%;
+        width: auto;
+    }
+
     .product__text__overlay {
         background-color: $white;
         // height: 100%;
@@ -51,7 +56,7 @@
     }
 
     &:hover {
-        background-color: $blue;
+        // background-color: $blue;
 
         .product__text__overlay {
             opacity: 1;

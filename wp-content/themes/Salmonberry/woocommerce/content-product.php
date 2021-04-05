@@ -11,12 +11,13 @@
     $cart_item_key = WC()->cart->find_product_in_cart($cart_id);
     $cart_item_quantities = WC()->cart->get_cart_item_quantities();
     $cart_item_quantity = isset($cart_item_quantities[$product_id]) ? $cart_item_quantities[$product_id] : '0';
+    $excerpt = get_the_excerpt();
+    $excerpt = str_replace("&nbsp;", ' ', $excerpt);
+    $excerpt = trim($excerpt);
 
-    // $button_text = "Add to Cart";
     $button_class = "";
     global $product;
     if ( ! $product->managing_stock() && ! $product->is_in_stock() ) {
-        // $button_text = "Out of Stock";
         $button_class = "out-of-stock";
     }
 
@@ -27,7 +28,14 @@
 
 <div class="product__tile row">
     <a class="product__tile__link" href="<?php echo $product_url; ?>">
-        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);"><?php the_excerpt(); ?></div>
+        <div class="product__image background__image row middle" style="background-image: url(<?php echo the_post_thumbnail_url(); ?>);">
+            <div class="product__image__overlay"></div>
+            <?php
+                if($excerpt != '') {
+                    echo "<div class='product__text__overlay'>" . $excerpt . "</div>";
+                }
+            ?>
+        </div>
         
         <div class="product__text">
             <h3 class="product__row"><?php the_title(); ?></h3>
