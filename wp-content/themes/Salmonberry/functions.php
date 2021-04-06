@@ -56,7 +56,7 @@ function create_post_types() {
                 'singular_name' => __('Producer')
             ),
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => false,
             'rewrite' => array(
                 'slug' => 'producers'
             ),

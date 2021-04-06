@@ -21,7 +21,7 @@
         section { margin: $spacer 0; }
 
         .row {
-            flex-direction: column-reverse;
+            // flex-direction: column-reverse;
         }
 
         .col-3,
@@ -31,6 +31,6 @@
             padding: 0 $spacer-less;
         }
 
-        .col-3 img { display: none; }
+        // .col-3 img { display: none; }
     }
 }
