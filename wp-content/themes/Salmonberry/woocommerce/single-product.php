@@ -106,7 +106,7 @@
                                     } else {
                                         echo "This product is available in the following regions: ";
                                         foreach($regions as $region) {
-                                            echo regionPrettify($region);
+                                            echo strPrettify($region);
                                             echo $count > 1 ? ", " :  " ";
                                             $count--;
                                         }

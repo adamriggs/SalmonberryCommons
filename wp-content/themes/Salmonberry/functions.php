@@ -199,7 +199,7 @@ function st_woocommerce_shop_url(){
     return site_url();
 }
 
-function regionPrettify($str) {
+function strPrettify($str) {
     // $words = ;
     $region = implode(' ', explode('-', $str));
     $region = ucwords($region);

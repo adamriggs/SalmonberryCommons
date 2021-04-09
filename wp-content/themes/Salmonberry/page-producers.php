@@ -37,36 +37,40 @@ get_header(); ?>
                 <?php echo apply_filters('the_content', $producer->post_content); ?>
 
                 <?php
-                    // $args = array (
-                    //         'post_type'         => 'product',
-                    //         // 'post_status'       => 'publish',
-                    //         'meta_query'        => array (
-                    //             array (
-                    //                 'key'       => 'producers',
-                    //                 // 'value'     => $producer->post_name,
-                    //                 'value'     => $name,
-                    //                 'compare'   => '=',
-                    //                 // 'value'     => '',
-                    //                 // 'compare'   => '!='
-                    //             )
-                    //         ),
-                    // );
+                    $args = array (
+                            'post_type'         => 'product',
+                            // 'post_status'       => 'publish',
+                            'meta_query'        => array (
+                                // 'relation' => 'AND',
+                                array (
+                                    'key'       => 'producers',
+                                    // 'value'     => $producer->post_name,
+                                    'value'     => strPrettify($name),
+                                    'compare'   => '=',
+                                    // 'value'     => '',
+                                    // 'compare'   => '!='
+                                )
+                            ),
+                    );
 
-                    // $loop = new WP_Query( $args );
+                        // echo('<pre>');
+                        // print_r(strPrettify($name));
+                        // echo('</pre>');
 
-                    // if (have_posts()) : while ( $loop->have_posts() ) : $loop->the_post();
+                    $loop = new WP_Query( $args );
+
+                    if (have_posts()) : while ( $loop->have_posts() ) : $loop->the_post();
 
 
-                    //     // $p = get_field('producers');
-                    //     // echo('<pre>');
-                    //     // print_r($p);
-                    //     // echo('</pre>');
+                        // $p = get_field('producers');
+                        // echo('<pre>');
+                        // print_r($p);
+                        // echo('</pre>');
+                        echo get_the_title() . ',';
 
-                    //     echo get_the_title() . ',';
-
-                    // endwhile;
-                    // endif;
-                    // wp_reset_query();
+                    endwhile;
+                    endif;
+                    wp_reset_query();
                 ?>
             </div>
 

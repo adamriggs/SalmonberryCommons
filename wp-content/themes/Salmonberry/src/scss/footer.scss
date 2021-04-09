@@ -144,6 +144,23 @@ footer {
     }
 }
 
+#mc_embed_signup_scroll {
+    display: flex;
+}
+
+div#mc_embed_signup form {
+    padding: 0;
+}
+
+#mc_embed_signup .mc-field-group .required {
+    // width: auto;
+}
+
+// #mc_embed_signup #mc_embed_signup_scroll input {
+//     border: inherit;
+//     border-radius: inherit;
+// }
+
 @media only screen and (max-width: 1150px) {
     footer {
         .footer__longtext {

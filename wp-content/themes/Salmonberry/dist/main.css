@@ -415,7 +415,9 @@ body {
   min-height: 100%;
   overflow-x: hidden; }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+#mc_embed_signup .mc-field-group input {
   background-clip: border-box;
   background-clip: initial;
   background-origin: padding-box;
@@ -430,7 +432,9 @@ input[type="text"] {
   font-weight: 800;
   padding: 5px 10px;
   text-transform: uppercase; }
-  input[type="text"]:focus {
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  #mc_embed_signup .mc-field-group input:focus {
     border: 2px solid #f38134;
     outline: none; }
 
@@ -532,6 +536,8 @@ section {
   margin: 18px 0 0 0; }
 
 button,
+.button,
+#mc_embed_signup form .button,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt {
   background-color: #f38134;
@@ -540,22 +546,29 @@ button,
   cursor: pointer;
   font-family: "Avenir", Arial, sans-serif;
   font-size: 15px;
+  height: auto;
   line-height: 14px;
   padding: 12px 15px;
   text-transform: uppercase;
   -webkit-transition: background-color 0.25s, border 0.25s;
   transition: background-color 0.25s, border 0.25s; }
   button:hover,
+  .button:hover,
+  #mc_embed_signup form .button:hover,
   .woocommerce a.button.alt:hover,
   .woocommerce button.button.alt:hover {
     background-color: #4e81c2;
     border: 1px solid #4e81c2; }
   button.out-of-stock:hover,
+  .button.out-of-stock:hover,
+  #mc_embed_signup form .button.out-of-stock:hover,
   .woocommerce a.button.alt.out-of-stock:hover,
   .woocommerce button.button.alt.out-of-stock:hover {
     background-color: #ccc;
     border: 1px solid #ccc; }
   button a,
+  .button a,
+  #mc_embed_signup form .button a,
   .woocommerce a.button.alt a,
   .woocommerce button.button.alt a {
     font-family: "Avenir", Arial, sans-serif;
@@ -1136,6 +1149,14 @@ footer {
     height: 20px; }
   footer .footer__breadcrumb {
     color: #f38134; }
+
+#mc_embed_signup_scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+div#mc_embed_signup form {
+  padding: 0; }
 
 @media only screen and (max-width: 1150px) {
   footer .footer__longtext {
