@@ -199,6 +199,13 @@ function st_woocommerce_shop_url(){
     return site_url();
 }
 
+function regionPrettify($str) {
+    // $words = ;
+    $region = implode(' ', explode('-', $str));
+    $region = ucwords($region);
+    return $region;
+}
+
 // function winwar_first_sentence( $string ) {
  
 //     $sentence = preg_split( '/(\.|!|\?)\s/', $string, 2, PREG_SPLIT_DELIM_CAPTURE );

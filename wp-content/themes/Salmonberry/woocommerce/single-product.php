@@ -38,10 +38,11 @@
 
                         $quantity = get_field('quantity');
                         $producers = get_field('producers');
-                        $delivery = get_field('delivery_pickup');
+                        // $delivery = get_field('delivery_pickup');
+                        $regions = get_field('delivery_region');
 
                         // echo('<pre>');
-                        // print_r($quantity);
+                        // print_r($regions);
                         // echo('</pre>');
                     ?>
                     
@@ -93,12 +94,30 @@
                         <?php the_content(); ?>
 
                         <?php
-                            if($delivery) {
+                            // if($delivery) {
                         ?>
                             <h1>Delivery / Pickup</h1>
-                            <?php echo $delivery; ?>
+                            <?php
+                                // echo $delivery;
+                                if(isset($regions)) {
+                                    $count = count($regions);
+                                    if($count >= 3) {
+                                        echo "This product is available for all delivery regions and pickup.";
+                                    } else {
+                                        echo "This product is available in the following regions: ";
+                                        foreach($regions as $region) {
+                                            echo regionPrettify($region);
+                                            echo $count > 1 ? ", " :  " ";
+                                            $count--;
+                                        }
+                                        // echo ".";
+                                    }
+                                } else {
+                                    echo "This product is available for all delivery regions and pickup.";
+                                }
+                            ?>
                         <?php
-                            }
+                            // }
                         ?>
 
                         <div class="hr orange"></div>
