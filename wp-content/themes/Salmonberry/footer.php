@@ -9,7 +9,7 @@
             <div class="col-6">
                 <div class="row middle">
                     <div class="col-4 start footer__get"><h2>Get To Know</h2></div>
-                    <div class="col-6 middle">
+                    <div class="col-5 middle">
                         <?php wp_nav_menu(array(
                             'menu' => 'info',
                             'container' => 'nav',
