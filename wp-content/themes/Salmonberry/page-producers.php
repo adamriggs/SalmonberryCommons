@@ -21,6 +21,7 @@ get_header(); ?>
             foreach($producers as $producer) {
                 $producer = $producer['producer'];
                 $id = $producer->ID;
+                $name = $producer->post_name;
                 // echo('<pre>');
                 // print_r($producer);
                 // echo('</pre>');
@@ -34,6 +35,39 @@ get_header(); ?>
             <div class="col-6">
                 <h1 id="<?php echo $id; ?>"><?php echo $producer->post_title; ?></h1>
                 <?php echo apply_filters('the_content', $producer->post_content); ?>
+
+                <?php
+                    // $args = array (
+                    //         'post_type'         => 'product',
+                    //         // 'post_status'       => 'publish',
+                    //         'meta_query'        => array (
+                    //             array (
+                    //                 'key'       => 'producers',
+                    //                 // 'value'     => $producer->post_name,
+                    //                 'value'     => $name,
+                    //                 'compare'   => '=',
+                    //                 // 'value'     => '',
+                    //                 // 'compare'   => '!='
+                    //             )
+                    //         ),
+                    // );
+
+                    // $loop = new WP_Query( $args );
+
+                    // if (have_posts()) : while ( $loop->have_posts() ) : $loop->the_post();
+
+
+                    //     // $p = get_field('producers');
+                    //     // echo('<pre>');
+                    //     // print_r($p);
+                    //     // echo('</pre>');
+
+                    //     echo get_the_title() . ',';
+
+                    // endwhile;
+                    // endif;
+                    // wp_reset_query();
+                ?>
             </div>
 
             <div class="col-3">

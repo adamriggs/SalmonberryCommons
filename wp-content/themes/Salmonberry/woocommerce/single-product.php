@@ -40,9 +40,9 @@
                         $producers = get_field('producers');
                         $delivery = get_field('delivery_pickup');
 
-                        echo('<pre>');
-                        print_r($quantity);
-                        echo('</pre>');
+                        // echo('<pre>');
+                        // print_r($quantity);
+                        // echo('</pre>');
                     ?>
                     
                     <div class="product__image col-6 background__image">
