@@ -114,7 +114,7 @@
 }
 
 .product__text__add__success {
-    animation: $transition-time ease-in $transition-time 1 normal both paused add-one;
+    animation: 1s ease-in $transition-time 1 normal both paused add-one;
     display: none;
     margin-left: $spacer-less;
     opacity: 0;

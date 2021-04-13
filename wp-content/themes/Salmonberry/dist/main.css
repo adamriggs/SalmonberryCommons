@@ -1578,8 +1578,8 @@ div#mc_embed_signup form {
     opacity: 1; }
 
 .product__text__add__success {
-  -webkit-animation: 0.25s ease-in 0.25s 1 normal both paused add-one;
-          animation: 0.25s ease-in 0.25s 1 normal both paused add-one;
+  -webkit-animation: 1s ease-in 0.25s 1 normal both paused add-one;
+          animation: 1s ease-in 0.25s 1 normal both paused add-one;
   display: none;
   margin-left: 18px;
   opacity: 0;
