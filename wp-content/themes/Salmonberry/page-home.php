@@ -51,7 +51,7 @@
 
         </section>
 
-        <section class="home__secondary row">
+<!--         <section class="home__secondary row">
             <div class="col-12 center"><h1><?php echo $secondary_title; ?></h1></div>
 
             <div class="home__secondary__step__container row around">
@@ -71,7 +71,7 @@
             <div class="home__secondary__arrow__container row center">
                 <img class="home__secondary__arrow arrow__down center" src="<?php echo get_template_directory_uri() . '/images/arrow-down.svg' ?>">
             </div>
-        </section>
+        </section> -->
 
         <section class="home__tertiary row">
             <div class="home__tertiary__title col-12 center"><h1><?php echo $tertiary_title; ?></h1></div>
