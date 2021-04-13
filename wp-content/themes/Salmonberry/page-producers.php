@@ -27,8 +27,8 @@ get_header(); ?>
                 // echo('</pre>');
         ?>
 
-        <section class="row">
-            <div id="<?php echo $id; ?>" class="col-3">
+        <section id="<?php echo $id; ?>" class="row">
+            <div class="col-3">
                 <?php echo get_the_post_thumbnail($id, 'medium'); ?>
             </div>
 
