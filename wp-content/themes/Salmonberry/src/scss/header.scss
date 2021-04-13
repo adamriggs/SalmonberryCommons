@@ -140,6 +140,7 @@ header.site-header {
 
             .menu > ul > li > a {
                 border-bottom: 1px solid $blue;
+                line-height: 23px;
             }
 
             .search__mobile {
@@ -159,6 +160,7 @@ header.site-header {
                 &.show {
                     opacity: 1;
                     visibility: visible;
+                    width: 50vw;
                 }
 
                 .cart-item-total {

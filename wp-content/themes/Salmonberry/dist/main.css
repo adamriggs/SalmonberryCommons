@@ -777,7 +777,8 @@ header.site-header {
         opacity: 1;
         visibility: visible; }
       header.site-header .header__mobile #menu__mobile .menu > ul > li > a {
-        border-bottom: 1px solid #4e81c2; }
+        border-bottom: 1px solid #4e81c2;
+        line-height: 23px; }
       header.site-header .header__mobile #menu__mobile .search__mobile {
         cursor: pointer;
         padding-top: 18px; }
@@ -794,7 +795,8 @@ header.site-header {
           width: 20px; }
         header.site-header .header__mobile #menu__mobile .header__cart.show {
           opacity: 1;
-          visibility: visible; }
+          visibility: visible;
+          width: 50vw; }
         header.site-header .header__mobile #menu__mobile .header__cart .cart-item-total {
           color: #4e81c2;
           font-size: 12px; }
