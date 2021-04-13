@@ -28,12 +28,12 @@ get_header(); ?>
         ?>
 
         <section class="row">
-            <div class="col-3">
+            <div id="<?php echo $id; ?>" class="col-3">
                 <?php echo get_the_post_thumbnail($id, 'medium'); ?>
             </div>
 
             <div class="col-6">
-                <h1 id="<?php echo $id; ?>"><?php echo $producer->post_title; ?></h1>
+                <h1><?php echo $producer->post_title; ?></h1>
                 <?php echo apply_filters('the_content', $producer->post_content); ?>
 
                 <?php
