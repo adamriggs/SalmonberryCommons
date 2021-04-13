@@ -795,8 +795,7 @@ header.site-header {
           width: 20px; }
         header.site-header .header__mobile #menu__mobile .header__cart.show {
           opacity: 1;
-          visibility: visible;
-          width: 50vw; }
+          visibility: visible; }
         header.site-header .header__mobile #menu__mobile .header__cart .cart-item-total {
           color: #4e81c2;
           font-size: 12px; }
