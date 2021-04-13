@@ -258,6 +258,10 @@
         @include flex__full;
     }
 
+    .home__tertiary__row .col-3 a .product__image {
+        height: 512px;
+    }
+
     .home__tertiary__arrow__container--down {
         max-height: 35px;
     }

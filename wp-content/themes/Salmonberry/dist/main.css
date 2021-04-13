@@ -1464,6 +1464,8 @@ div#mc_embed_signup form {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     max-width: 100%; }
+  .home__tertiary__row .col-3 a .product__image {
+    height: 512px; }
   .home__tertiary__arrow__container--down {
     max-height: 35px; }
   .home .home__tertiary .home__tertiary__photo {
