@@ -131,6 +131,7 @@
 
                                     echo '<h1>' . the_title() . '</h1>';
                                     echo the_content();
+                                    echo '<a class=" button region__display__change">Wrong Area? Click here.</a>';
 
                                 } // end while
                             } // end if
