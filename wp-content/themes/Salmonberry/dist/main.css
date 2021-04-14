@@ -575,6 +575,13 @@ button,
     font-size: 15px;
     text-transform: uppercase; }
 
+#mce-responses {
+  margin-left: 0;
+  position: absolute;
+  top: 20px; }
+  #mce-responses a {
+    font-size: 18px; }
+
 img {
   height: auto;
   max-width: 100%;
