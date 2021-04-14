@@ -92,33 +92,27 @@
                         </div>
 
                         <?php the_content(); ?>
-
+<!-- 
+                        <h1>Delivery / Pickup</h1>
                         <?php
-                            // if($delivery) {
-                        ?>
-                            <h1>Delivery / Pickup</h1>
-                            <?php
-                                // echo $delivery;
-                                if(isset($regions)) {
-                                    $count = count($regions);
-                                    if($count >= 3) {
-                                        echo "This product is available for all delivery regions and pickup.";
-                                    } else {
-                                        echo "This product is available in the following regions: ";
-                                        foreach($regions as $region) {
-                                            echo strPrettify($region);
-                                            echo $count > 1 ? ", " :  " ";
-                                            $count--;
-                                        }
-                                        // echo ".";
-                                    }
-                                } else {
+                            // echo $delivery;
+                            if(isset($regions)) {
+                                $count = count($regions);
+                                if($count >= 3) {
                                     echo "This product is available for all delivery regions and pickup.";
+                                } else {
+                                    echo "This product is available in the following regions: ";
+                                    foreach($regions as $region) {
+                                        echo strPrettify($region);
+                                        echo $count > 1 ? ", " :  " ";
+                                        $count--;
+                                    }
+                                    // echo ".";
                                 }
-                            ?>
-                        <?php
-                            // }
-                        ?>
+                            } else {
+                                echo "This product is available for all delivery regions and pickup.";
+                            }
+                        ?> -->
 
                         <div class="hr orange"></div>
 
