@@ -49,7 +49,7 @@
 
                 <div class="header__right__top row middle">
                     <div class="header__right__top__left col-4">
-                        <img class="header__salmonberry" src="<?php echo get_template_directory_uri() . '/images/salmonberry.png'; ?>" />
+                        <a href="https://www.thesalmonberry.fun" target="_blank"><img class="header__salmonberry" src="<?php echo get_template_directory_uri() . '/images/salmonberry.png'; ?>" /></a>
                     </div>
                     <div class="col-5"></div>
                     <div class="header__right__top__right col-3">
