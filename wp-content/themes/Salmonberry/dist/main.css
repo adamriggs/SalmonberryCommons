@@ -418,7 +418,8 @@ body {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-#mc_embed_signup .mc-field-group input {
+#mc_embed_signup .mc-field-group input,
+.select2-container--default .select2-selection--single {
   background-clip: border-box;
   background-clip: initial;
   background-origin: padding-box;
@@ -436,7 +437,8 @@ input[type="tel"],
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="tel"]:focus,
-  #mc_embed_signup .mc-field-group input:focus {
+  #mc_embed_signup .mc-field-group input:focus,
+  .select2-container--default .select2-selection--single:focus {
     border: 2px solid #f38134;
     outline: none; }
 
