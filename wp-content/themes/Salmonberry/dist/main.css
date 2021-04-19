@@ -417,6 +417,7 @@ body {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 #mc_embed_signup .mc-field-group input {
   background-clip: border-box;
   background-clip: initial;
@@ -434,6 +435,7 @@ input[type="email"],
   text-transform: uppercase; }
   input[type="text"]:focus,
   input[type="email"]:focus,
+  input[type="tel"]:focus,
   #mc_embed_signup .mc-field-group input:focus {
     border: 2px solid #f38134;
     outline: none; }
@@ -1239,6 +1241,12 @@ div#mc_embed_signup .mc-field-group {
   border-top-color: #4e81c2; }
   .woocommerce-message::before {
     color: #f38134; }
+
+.woocommerce-input-wrapper input[type="text"],
+.woocommerce-input-wrapper input[type="email"],
+.woocommerce-input-wrapper input[type="tel"],
+.woocommerce-input-wrapper #mc_embed_signup .mc-field-group input {
+  border-radius: 0; }
 
 .woocommerce-info {
   border-top: 0; }
