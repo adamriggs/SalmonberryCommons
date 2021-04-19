@@ -1254,6 +1254,9 @@ div#mc_embed_signup .mc-field-group {
 .woocommerce-input-wrapper .select2-container--default .select2-selection--single {
   border-radius: 0; }
 
+.woocommerce-input-wrapper .select2-container--default .select2-selection--single {
+  padding: 0; }
+
 .woocommerce-info {
   border-top: 0; }
 
