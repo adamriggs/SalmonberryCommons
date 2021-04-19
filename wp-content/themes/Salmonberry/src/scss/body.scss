@@ -63,6 +63,10 @@ input[type="tel"],
     }
 }
 
+.select2-container--default .select2-selection--single {
+    padding: 0;
+}
+
 .content-area {
     flex: 1;
 }
