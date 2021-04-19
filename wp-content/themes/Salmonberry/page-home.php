@@ -73,7 +73,7 @@
             </div>
         </section> 
 
-        <section class="home__tertiary row">
+        <section id="goods" class="home__tertiary row">
             <div class="home__tertiary__title col-12 center"><h1><?php echo $tertiary_title; ?></h1></div>
 
             <?php

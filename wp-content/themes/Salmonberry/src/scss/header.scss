@@ -173,6 +173,11 @@ header.site-header {
 }
 
 .region__display {
+    a,
+    span {
+        font-size: 13px;
+    }
+
     a {
         display: block;
         text-decoration: underline;

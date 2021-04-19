@@ -78,12 +78,14 @@ h2 {
     font-family: "Barlow-Extra Bold", $font-fallback;
     font-size: 36px;
     text-transform: uppercase;
+    transition: color $transition-time ease-in-out;
 }
 
 h3 {
     color: $orange;
     font-family: "Barlow-Extra Bold", $font-fallback;
     font-size: 22px;
+    line-height: 22px;
     text-transform: uppercase;
 
     &.h3__invert {

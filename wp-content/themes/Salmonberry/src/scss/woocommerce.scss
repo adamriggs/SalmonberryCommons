@@ -53,6 +53,10 @@
     }
 }
 
+.woocommerce-info {
+    border-top: 0;
+}
+
 .woocommerce a.remove {
     color: $orange !important;
 
@@ -68,4 +72,8 @@
 
 .woocommerce-checkout #payment .payment_method_paypal img {
     width: auto;
+}
+
+.woocommerce-privacy-policy-text {
+    margin-bottom: $spacer-less;
 }

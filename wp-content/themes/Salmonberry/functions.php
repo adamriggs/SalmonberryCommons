@@ -199,6 +199,13 @@ function st_woocommerce_shop_url(){
     return site_url();
 }
 
+function store_mall_wc_empty_cart_redirect_url() {
+    // $url = 'http://example.com/sample-page'; // change this link to your need
+    $url = site_url() . '#goods';
+    return esc_url( $url );
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'store_mall_wc_empty_cart_redirect_url' );
+
 function strPrettify($str) {
     // $words = ;
     $region = implode(' ', explode('-', $str));

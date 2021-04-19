@@ -70,7 +70,7 @@
                             ?>
                                 
                         </div>
-                        <h5 class="product__row center"><?php echo get_the_title(); ?></h5>
+                        <h3 class="product__row blue center"><?php echo get_the_title(); ?></h3>
                     </a>
                     
                     <div class="product__row__button center">

@@ -78,14 +78,35 @@
 .product__text {
     padding-right: $spacer-more;
 
-    h1 { margin-bottom: $spacer-less; }
+    h1 {
+        font-size: 32px;
+        margin-bottom: $spacer-less;
+    }
 
     h3 {
         display: inline-block;
         margin: $spacer-less 0;
     }
 
-    .hr { margin-bottom: $spacer-less; }
+    .region__display__title {
+        margin-bottom: $spacer-less;
+    }
+
+    .region__display__description {
+        margin-bottom: $spacer-less;
+
+        p { font-size: 18px; }
+    }
+
+    .region__display__change {
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .hr { margin: $spacer-less 0; }
 }
 
 .product__text__add {
@@ -181,7 +202,6 @@
             h3 {
                 color: $blue;
                 display: block;
-                text-align: left;
                 text-transform: none;
                 transition: color $transition-time;
             }

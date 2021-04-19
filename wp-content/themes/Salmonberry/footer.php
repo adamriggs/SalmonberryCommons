@@ -8,16 +8,18 @@
         <section class="footer__container row middle">
             <div class="col-6">
                 <div class="row middle">
-                    <div class="col-4 start footer__get"><h2>Get To Know</h2></div>
-                    <div class="col-5">
-                        <?php wp_nav_menu(array(
-                            'menu' => 'info',
-                            'container' => 'nav',
-                            'container_class' => 'menu',
-                            'container_id' => '',
-                            'menu_class' => 'row footer__info'
-                        )); ?>
-                        
+                    <div class="row bottom">
+                        <div class="col-4 start"><h2>Get To Know</h2></div>
+                        <div class="col-5">
+                            <?php wp_nav_menu(array(
+                                'menu' => 'info',
+                                'container' => 'nav',
+                                'container_class' => 'menu',
+                                'container_id' => '',
+                                'menu_class' => 'row footer__info'
+                            )); ?>
+                            
+                        </div>
                     </div>
                     <div class="col-12 footer__row2 footer__longtext start"><h2>Salmonberry Commons</h2></div>
                 </div>

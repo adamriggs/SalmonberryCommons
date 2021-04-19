@@ -455,12 +455,15 @@ h2 {
   color: #f38134;
   font-family: "Barlow-Extra Bold", Arial, sans-serif;
   font-size: 36px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out; }
 
 h3 {
   color: #f38134;
   font-family: "Barlow-Extra Bold", Arial, sans-serif;
   font-size: 22px;
+  line-height: 22px;
   text-transform: uppercase; }
   h3.h3__invert {
     background-color: #f38134;
@@ -807,6 +810,10 @@ header.site-header {
           color: #4e81c2;
           font-size: 12px; }
 
+.region__display a,
+.region__display span {
+  font-size: 13px; }
+
 .region__display a {
   display: block;
   text-decoration: underline; }
@@ -1067,10 +1074,8 @@ footer {
       padding: 18px 0; }
     footer section h1 {
       padding-right: 18px; }
-  footer .footer__info {
-    padding-right: 18px; }
-    footer .footer__info li {
-      padding-right: 20px; }
+  footer .footer__info li {
+    padding-right: 20px; }
   footer .footer__longtext {
     letter-spacing: 3px; }
   footer .footer__container {
@@ -1168,6 +1173,9 @@ footer {
 div#mc_embed_signup form {
   padding: 0; }
 
+div#mc_embed_signup .mc-field-group {
+  margin-right: 20px; }
+
 @media only screen and (max-width: 1150px) {
   footer .footer__longtext {
     letter-spacing: inherit; } }
@@ -1232,6 +1240,9 @@ div#mc_embed_signup form {
   .woocommerce-message::before {
     color: #f38134; }
 
+.woocommerce-info {
+  border-top: 0; }
+
 .woocommerce a.remove {
   color: #f38134 !important; }
   .woocommerce a.remove:hover {
@@ -1243,6 +1254,9 @@ div#mc_embed_signup form {
 
 .woocommerce-checkout #payment .payment_method_paypal img {
   width: auto; }
+
+.woocommerce-privacy-policy-text {
+  margin-bottom: 18px; }
 
 .featured h4 {
   margin: 18px 0 24px; }
@@ -1320,7 +1334,7 @@ div#mc_embed_signup form {
   height: 513px; }
 
 .home__secondary h1 {
-  margin: 80px 0 108px; }
+  margin: 44px 0 44px; }
 
 .home__secondary__step__container {
   margin: 0 120px; }
@@ -1346,7 +1360,7 @@ div#mc_embed_signup form {
   height: 160px; }
 
 .home__tertiary__title {
-  margin-bottom: 120px; }
+  margin-bottom: 44px; }
 
 .home__tertiary__row {
   margin: 0 120px 44px; }
@@ -1372,6 +1386,7 @@ div#mc_embed_signup form {
     .home__tertiary__row .col-3 .product__row__button {
       -ms-flex-item-align: end;
           align-self: flex-end;
+      margin-top: 18px;
       width: 100%; }
     .home__tertiary__row .col-3 .product__row__add__container {
       width: 100%; }
@@ -1490,7 +1505,7 @@ div#mc_embed_signup form {
     margin-top: 18px; } }
 
 .single-page section {
-  padding: 120px 0; }
+  padding: 44px 0; }
 
 .single-page h1 {
   padding-bottom: 20px; }
@@ -1562,12 +1577,23 @@ div#mc_embed_signup form {
 .product__text {
   padding-right: 120px; }
   .product__text h1 {
+    font-size: 32px;
     margin-bottom: 18px; }
   .product__text h3 {
     display: inline-block;
     margin: 18px 0; }
-  .product__text .hr {
+  .product__text .region__display__title {
     margin-bottom: 18px; }
+  .product__text .region__display__description {
+    margin-bottom: 18px; }
+    .product__text .region__display__description p {
+      font-size: 18px; }
+  .product__text .region__display__change {
+    cursor: pointer; }
+    .product__text .region__display__change:hover {
+      text-decoration: underline; }
+  .product__text .hr {
+    margin: 18px 0; }
 
 .product__text__add {
   margin-bottom: 18px; }
@@ -1641,7 +1667,6 @@ div#mc_embed_signup form {
       .product__tile .product__tile__link .product__text h3 {
         color: #4e81c2;
         display: block;
-        text-align: left;
         text-transform: none;
         -webkit-transition: color 0.25s;
         transition: color 0.25s; }

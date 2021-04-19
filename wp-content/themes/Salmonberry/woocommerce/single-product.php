@@ -129,9 +129,13 @@
                                 while ( $query->have_posts() ) {
                                     $query->the_post(); 
 
-                                    echo '<h1>' . the_title() . '</h1>';
-                                    echo the_content();
-                                    echo '<a class=" button region__display__change">Wrong Area? Click here.</a>';
+                                    echo '<div class="region__display__title">';
+                                    the_title();
+                                    echo '</div>';
+                                    echo '<div class="region__display__description">';
+                                    the_content();
+                                    echo '</div>';
+                                    echo '<a class="region__display__change">Wrong Area? Click here.</a>';
 
                                 } // end while
                             } // end if

@@ -37,7 +37,7 @@
 }
 
 .home__secondary h1 {
-    margin: 80px 0 108px;
+    margin: $spacer 0 $spacer;
 }
 
 .home__secondary__step__container {
@@ -74,7 +74,7 @@
 }
 
 .home__tertiary__title {
-    margin-bottom: $spacer-more;
+    margin-bottom: $spacer;
 }
 
 .home__tertiary__row {
@@ -106,6 +106,7 @@
 
         .product__row__button {
             align-self: flex-end;
+            margin-top: $spacer-less;
             width: 100%;
         }
 
