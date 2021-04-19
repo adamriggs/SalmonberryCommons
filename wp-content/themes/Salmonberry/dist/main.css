@@ -1599,18 +1599,21 @@ div#mc_embed_signup .mc-field-group {
   .product__text h3 {
     display: inline-block;
     margin: 18px 0; }
-  .product__text .region__display__title {
-    margin-bottom: 18px; }
-  .product__text .region__display__description {
-    margin-bottom: 18px; }
-    .product__text .region__display__description p {
-      font-size: 18px; }
-  .product__text .region__display__change {
-    cursor: pointer; }
-    .product__text .region__display__change:hover {
-      text-decoration: underline; }
   .product__text .hr {
     margin: 18px 0; }
+
+.product__region .region__display__title {
+  margin-bottom: 18px; }
+
+.product__region .region__display__description {
+  margin-bottom: 18px; }
+  .product__region .region__display__description p {
+    font-size: 18px; }
+
+.product__region .region__display__change {
+  cursor: pointer; }
+  .product__region .region__display__change:hover {
+    text-decoration: underline; }
 
 .product__text__add {
   margin-bottom: 18px; }

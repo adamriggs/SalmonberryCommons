@@ -91,37 +91,40 @@
 
                         <?php the_content(); ?>
 
-                        <h1>Delivery / Pickup</h1>
-                        <?php
+                        <div class="product__region">
 
-                            $zone = $_COOKIE['salmonberry_region'];
+                            <h1>Delivery / Pickup</h1>
+                            <?php
 
-                            // echo('<pre>');
-                            // print_r($zone);
-                            // echo('</pre>');
+                                $zone = $_COOKIE['salmonberry_region'];
 
-                            $args = array(
-                                'post_type'        => 'delivery-regions',
-                                'name'             => $zone
-                            );
+                                // echo('<pre>');
+                                // print_r($zone);
+                                // echo('</pre>');
 
-                            $query = new WP_Query( $args ); 
-                            if ( $query->have_posts() ) {
-                                while ( $query->have_posts() ) {
-                                    $query->the_post(); 
+                                $args = array(
+                                    'post_type'        => 'delivery-regions',
+                                    'name'             => $zone
+                                );
 
-                                    echo '<div class="region__display__title">';
-                                    the_title();
-                                    echo '</div>';
-                                    echo '<div class="region__display__description">';
-                                    the_content();
-                                    echo '</div>';
-                                    echo '<a class="region__display__change">Wrong Area? Click here.</a>';
+                                $query = new WP_Query( $args ); 
+                                if ( $query->have_posts() ) {
+                                    while ( $query->have_posts() ) {
+                                        $query->the_post(); 
 
-                                } // end while
-                            } // end if
-                            wp_reset_query();
-                        ?>
+                                        echo '<div class="region__display__title">';
+                                        the_title();
+                                        echo '</div>';
+                                        echo '<div class="region__display__description">';
+                                        the_content();
+                                        echo '</div>';
+                                        echo '<a class="region__display__change">Wrong Area? Click here.</a>';
+
+                                    } // end while
+                                } // end if
+                                wp_reset_query();
+                            ?>
+                        </div>
 
                         <div class="hr orange"></div>
 
