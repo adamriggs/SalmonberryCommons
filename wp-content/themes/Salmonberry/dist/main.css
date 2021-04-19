@@ -1247,7 +1247,8 @@ div#mc_embed_signup .mc-field-group {
 .woocommerce-input-wrapper input[type="text"],
 .woocommerce-input-wrapper input[type="email"],
 .woocommerce-input-wrapper input[type="tel"],
-.woocommerce-input-wrapper #mc_embed_signup .mc-field-group input {
+.woocommerce-input-wrapper #mc_embed_signup .mc-field-group input,
+.woocommerce-input-wrapper .select2-container--default .select2-selection--single {
   border-radius: 0; }
 
 .woocommerce-info {

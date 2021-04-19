@@ -57,7 +57,8 @@
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    #mc_embed_signup .mc-field-group input {
+    #mc_embed_signup .mc-field-group input,
+    .select2-container--default .select2-selection--single {
         border-radius: 0;
         // background-clip: initial;
         // background-origin: initial;
