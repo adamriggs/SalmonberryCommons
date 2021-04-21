@@ -171,4 +171,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // PRODUCT TILE IMAGE SIZING
+    const productImage = document.getElementsByClassName('product__image');
+    console.log(productImage);
+
+    window.addEventListener('resize', resizeEvent);
+
+    function resizeEvent() {
+        // console.log(productImage[0].offsetWidth);
+        Array.from(productImage).forEach(element => {
+            console.log(element.offsetWidth);
+            element.style.height = element.offsetWidth + 'px';
+        });
+    }
+
+    resizeEvent();
 });
