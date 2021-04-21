@@ -1395,33 +1395,38 @@ div#mc_embed_signup .mc-field-group {
     position: absolute; }
   .home__tertiary__row .product__text__add__success {
     position: absolute; }
-  .home__tertiary__row .col-3 {
+  .home__tertiary__row .product__row__tile {
     max-width: 24%; }
-    .home__tertiary__row .col-3 a {
+    .home__tertiary__row .product__row__tile a {
       width: 100%; }
-    .home__tertiary__row .col-3 a .product__image {
+    .home__tertiary__row .product__row__tile a .product__image {
+      background-size: contain;
       height: 228px;
       margin-bottom: 10px;
+      -o-object-fit: contain;
+         object-fit: contain;
       padding: 0; }
-    .home__tertiary__row .col-3 a:hover h5 {
+    .home__tertiary__row .product__row__tile a:hover h5 {
       color: #f38134; }
-    .home__tertiary__row .col-3 h5 {
+    .home__tertiary__row .product__row__tile h3 {
+      text-transform: none; }
+    .home__tertiary__row .product__row__tile h4 {
       cursor: pointer;
       margin-bottom: 18px; }
-    .home__tertiary__row .col-3 .product__row__button {
+    .home__tertiary__row .product__row__tile .product__row__button {
       -ms-flex-item-align: end;
           align-self: flex-end;
       margin-top: 18px;
       width: 100%; }
-    .home__tertiary__row .col-3 .product__row__add__container {
+    .home__tertiary__row .product__row__tile .product__row__add__container {
       width: 100%; }
-    .home__tertiary__row .col-3 .product__row__add {
+    .home__tertiary__row .product__row__tile .product__row__add {
       border-bottom: 1px solid #fff;
       display: inline-block;
       margin-bottom: 0; }
-      .home__tertiary__row .col-3 .product__row__add:hover {
+      .home__tertiary__row .product__row__tile .product__row__add:hover {
         border-bottom: 1px solid #4e81c2; }
-      .home__tertiary__row .col-3 .product__row__add.out-of-stock:hover {
+      .home__tertiary__row .product__row__tile .product__row__add.out-of-stock:hover {
         border-bottom: 1px solid #fff;
         color: #ccc;
         cursor: default; }
@@ -1472,12 +1477,12 @@ div#mc_embed_signup .mc-field-group {
     background-size: 66%; }
   .home__secondary__step__container {
     margin: 0 44px; }
-  .home__tertiary__row .col-3 {
+  .home__tertiary__row .product__row__tile {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     margin-bottom: 44px;
     max-width: 49%; }
-    .home__tertiary__row .col-3 a {
+    .home__tertiary__row .product__row__tile a {
       width: 100%; } }
 
 @media only screen and (max-width: 600px) {

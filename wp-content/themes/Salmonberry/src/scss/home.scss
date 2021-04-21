@@ -84,22 +84,27 @@
     .product__text__add__progress { position: absolute; }
     .product__text__add__success { position: absolute; }
 
-    .col-3 {
+    .product__row__tile {
         max-width: 24%;
 
         a { width: 100%; }
 
         a .product__image {
+            background-size: contain;
             height: 228px;
             margin-bottom: 10px;
+            object-fit: contain;
             padding: 0;
+            // width: 228px;
         }
 
         a:hover {
             h5 { color: $orange; }
         }
 
-        h5 {
+        h3 { text-transform: none; }
+
+        h4 {
             cursor: pointer;
             margin-bottom: $spacer-less;
         }
@@ -197,7 +202,7 @@
         margin: 0 $spacer;
     }
 
-    .home__tertiary__row .col-3 {
+    .home__tertiary__row .product__row__tile {
         flex-basis: 50%;
         margin-bottom: $spacer;
         max-width: 49%;
