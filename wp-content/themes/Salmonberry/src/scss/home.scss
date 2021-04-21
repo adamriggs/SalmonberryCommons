@@ -91,11 +91,17 @@
 
         a .product__image {
             background-size: contain;
-            height: 228px;
+            // height: 228px;
             margin-bottom: 10px;
             padding: 0;
             // padding-top: 100%;
             // width: 100%;
+
+            &:before {
+                content: "";
+                float: left;
+                padding-top: 100%;
+            }
         }
 
         a:hover {
