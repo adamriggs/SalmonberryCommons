@@ -126,10 +126,9 @@
                             ?>
                         </div>
 
-                        <div class="hr orange"></div>
-
 
                         <?php if($producers && count($producers) > 0) { ?>
+                            <div class="hr orange"></div>
                             <div class="product__text__producers">
                                 <?php
                                     $i = count($producers) - 1;

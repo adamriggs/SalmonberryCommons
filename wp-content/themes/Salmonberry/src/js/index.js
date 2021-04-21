@@ -177,10 +177,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeEvent);
 
     function resizeEvent() {
-        // console.log(productImage[0].offsetWidth);
         Array.from(productImage).forEach(element => {
-            console.log(element.offsetWidth);
-            element.style.height = element.offsetWidth + 'px';
+            const left = parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-left'), 10);
+            const right = parseInt(window.getComputedStyle(element, null).getPropertyValue('padding-right'), 10);
+            const padding = left + right;
+            element.style.height = (element.offsetWidth - padding) + 'px';
         });
     }
 
