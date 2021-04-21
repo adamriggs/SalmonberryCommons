@@ -1409,7 +1409,8 @@ div#mc_embed_signup .mc-field-group {
       color: #f38134; }
     .home__tertiary__row .product__row__tile h3 {
       text-transform: none; }
-    .home__tertiary__row .product__row__tile h4 {
+    .home__tertiary__row .product__row__tile h4,
+    .home__tertiary__row .product__row__tile h5 {
       cursor: pointer;
       margin-bottom: 18px; }
     .home__tertiary__row .product__row__tile .product__row__button {

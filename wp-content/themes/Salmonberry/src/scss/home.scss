@@ -103,7 +103,8 @@
 
         h3 { text-transform: none; }
 
-        h4 {
+        h4,
+        h5 {
             cursor: pointer;
             margin-bottom: $spacer-less;
         }
