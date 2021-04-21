@@ -4,7 +4,7 @@
     $sidebar_image = get_field('sidebar_image');
 
     // echo('<pre>');
-    // print_r($sidebar_image_url);
+    // print_r(isset($sidebar_image));
     // echo('</pre>');
 ?>
 
@@ -13,7 +13,7 @@
         <section class="row">
             <div class="col-3">
                 <?php
-                    if(isset($sidebar_image)) {
+                    if(isset($sidebar_image) && $sidebar_image != '') {
                         $sidebar_image_url = $sidebar_image['sizes']['medium'];
                 ?>
                     <img src="<?php echo $sidebar_image_url; ?>">
