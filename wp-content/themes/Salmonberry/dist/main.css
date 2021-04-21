@@ -1401,11 +1401,9 @@ div#mc_embed_signup .mc-field-group {
       width: 100%; }
     .home__tertiary__row .product__row__tile a .product__image {
       background-size: contain;
+      height: 228px;
       margin-bottom: 10px;
-      -o-object-fit: contain;
-         object-fit: contain;
-      padding: 0;
-      width: 100%; }
+      padding: 0; }
     .home__tertiary__row .product__row__tile a:hover h5 {
       color: #f38134; }
     .home__tertiary__row .product__row__tile h3 {
