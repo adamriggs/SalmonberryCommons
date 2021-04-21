@@ -169,4 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
             display.prepend(textNode);
         }
     }
+
+    // PRODUCT TILE IMAGE SIZING
 });

@@ -1403,11 +1403,8 @@ div#mc_embed_signup .mc-field-group {
       background-size: contain;
       margin-bottom: 10px;
       position: relative;
-      padding: 0; }
-      .home__tertiary__row .product__row__tile a .product__image:before {
-        content: "";
-        float: left;
-        padding-top: 50%; }
+      padding: 0;
+      width: 100%; }
     .home__tertiary__row .product__row__tile a:hover h5 {
       color: #f38134; }
     .home__tertiary__row .product__row__tile h3 {
