@@ -1535,16 +1535,16 @@ div#mc_embed_signup .mc-field-group {
     max-width: 100%;
     margin-top: 18px; } }
 
-.single-page section {
-  padding: 44px 0; }
-
-.single-page h1 {
-  padding-bottom: 20px; }
-
-.single-page .col-3 {
-  padding: 0 44px; }
-  .single-page .col-3 img {
-    background-size: contain; }
+.single-page {
+  margin-top: 44px; }
+  .single-page section {
+    padding: 44px 0; }
+  .single-page h1 {
+    padding-bottom: 20px; }
+  .single-page .col-3 {
+    padding: 0 44px; }
+    .single-page .col-3 img {
+      background-size: contain; }
 
 @media only screen and (max-width: 768px) {
   .single-page section {
