@@ -8,7 +8,7 @@
         <section class="footer__container row middle">
             <div class="col-6">
                 <div class="row middle">
-                    <div class="row bottom">
+                    <div class="footer__top__left row bottom">
                         <div class="col-4 start"><h2>Get To Know</h2></div>
                         <div class="col-5">
                             <?php wp_nav_menu(array(
@@ -28,7 +28,7 @@
             <div class="col-6">
                 <div class="row middle">
                     <div class="col-2 start"><h2>Help</h2></div>
-                    <div class="col-4 row middle"><img class="footer__arrow arrow__right center" src="<?php echo get_template_directory_uri() . '/images/arrow-right.svg' ?>"></div>
+                    <div class="footer__arrow col-4 row middle"><img class="footer__arrow arrow__right center" src="<?php echo get_template_directory_uri() . '/images/arrow-right.svg' ?>"></div>
                     <div class="footer__email col-6 end"><a href="mailto:hello@salmonberrycommons.com">Customer service: hello@salmonberrycommons.com</a></div>
                     <div class="menu row middle footer__row2">
                         <div class="col-10">
@@ -54,7 +54,7 @@
                                         <div id="mc_embed_signup_scroll">
                                         
                                             <div class="mc-field-group col-6">
-                                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Newsletter Signup">
+                                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Newsletter">
                                             </div>
 
                                             <div id="mce-responses" class="clear">

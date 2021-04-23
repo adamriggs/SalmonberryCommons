@@ -418,7 +418,7 @@ body {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-#mc_embed_signup .mc-field-group input,
+div#mc_embed_signup .mc-field-group input,
 .select2-container--default .select2-selection--single {
   background-clip: border-box;
   background-clip: initial;
@@ -437,10 +437,13 @@ input[type="tel"],
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="tel"]:focus,
-  #mc_embed_signup .mc-field-group input:focus,
+  div#mc_embed_signup .mc-field-group input:focus,
   .select2-container--default .select2-selection--single:focus {
     border: 2px solid #f38134;
     outline: none; }
+
+div#mc_embed_signup .mc-field-group input {
+  padding: 8px 0 8px 8px; }
 
 .select2-container--default .select2-selection--single {
   padding: 0; }
@@ -1212,6 +1215,14 @@ div#mc_embed_signup .mc-field-group {
         flex-basis: 100%;
     margin-bottom: 18px;
     max-width: 100%; } }
+
+@media only screen and (max-width: 600px) {
+  footer .footer__top__left div {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%; }
+  footer .footer__arrow {
+    padding-left: 5px; } }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   color: #4e81c2;

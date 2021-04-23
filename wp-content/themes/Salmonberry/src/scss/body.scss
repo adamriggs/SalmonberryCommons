@@ -27,7 +27,7 @@ body {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-#mc_embed_signup .mc-field-group input,
+div#mc_embed_signup .mc-field-group input,
 .select2-container--default .select2-selection--single {
     background-clip: initial;
     background-origin: initial;
@@ -46,6 +46,10 @@ input[type="tel"],
         border: 2px solid $orange;
         outline: none;
     }
+}
+
+div#mc_embed_signup .mc-field-group input {
+    padding: 8px 0 8px 8px;
 }
 
 .select2-container--default .select2-selection--single {
