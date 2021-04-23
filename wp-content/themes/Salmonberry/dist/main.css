@@ -1496,6 +1496,7 @@ div#mc_embed_signup .mc-field-group {
         flex-basis: 100%;
     max-width: 100%; }
   .home__primary__image {
+    background-attachment: inherit;
     background-size: 100%; }
   .home__primary__image {
     background-size: 100%; }
