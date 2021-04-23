@@ -1222,7 +1222,14 @@ div#mc_embed_signup .mc-field-group {
         flex-basis: 50%;
     max-width: 50%; }
   footer .footer__arrow {
-    padding-left: 5px; } }
+    padding-left: 10px; }
+  footer .footer__info {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: right; }
+    footer .footer__info li {
+      padding-right: 10px; } }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
   color: #4e81c2;
