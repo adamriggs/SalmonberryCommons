@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="row between">
+    <div class="home__tertiary__row__products row between">
         <?php
             $cur_region = '';
             if(isset($_COOKIE['salmonberry_region'])) {

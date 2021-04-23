@@ -84,6 +84,10 @@
     .product__text__add__progress { position: absolute; }
     .product__text__add__success { position: absolute; }
 
+    .home__tertiary__row__product {
+
+    }
+
     .product__row__tile {
         max-width: 24%;
 
@@ -263,6 +267,16 @@
 
     .home__tertiary__row .col-3 {
         @include flex__full;
+    }
+
+    .home__tertiary__row .product__row__tile {
+        flex-basis: 100%;
+        // margin-bottom: $spacer;
+        max-width: 100%;
+
+        // a {
+        //     width: 100%;
+        // }
     }
 
     .home__tertiary__row .col-3 a .product__image {
