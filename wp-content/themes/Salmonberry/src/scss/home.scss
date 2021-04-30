@@ -189,6 +189,15 @@
     }
 }
 
+@media only screen and (max-width: $tablet-break) {
+    .home__secondary__step {
+        img,
+        p {
+            width: 170px;
+        }
+    }
+}
+
 @media only screen and (max-width: $menu-mobile-break) {
     .home__primary .col-3 {
         flex-basis: 33%;
@@ -206,6 +215,13 @@
 
     .home__secondary__step__container {
         margin: 0 $spacer;
+    }
+
+    .home__secondary__step {
+        img,
+        p {
+            width: 150px;
+        }
     }
 
     .home__tertiary__row .product__row__tile {

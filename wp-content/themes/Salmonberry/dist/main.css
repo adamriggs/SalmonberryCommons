@@ -1484,6 +1484,11 @@ div#mc_embed_signup .mc-field-group {
   .home__tertiary__row {
     margin: 0 44px 44px; } }
 
+@media only screen and (max-width: 1024px) {
+  .home__secondary__step img,
+  .home__secondary__step p {
+    width: 170px; } }
+
 @media only screen and (max-width: 768px) {
   .home__primary .col-3 {
     -ms-flex-preferred-size: 33%;
@@ -1497,6 +1502,9 @@ div#mc_embed_signup .mc-field-group {
     background-size: 66%; }
   .home__secondary__step__container {
     margin: 0 44px; }
+  .home__secondary__step img,
+  .home__secondary__step p {
+    width: 150px; }
   .home__tertiary__row .product__row__tile {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
