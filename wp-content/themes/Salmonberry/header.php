@@ -41,7 +41,7 @@
                         'menu' => 'primary',
                         'container' => 'nav',
                         'container_class' => 'menu col-12',
-                        'menu_class' => 'row center between',
+                        'menu_class' => 'row center around',
                     )); 
                 ?>
             </div>

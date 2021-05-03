@@ -1641,7 +1641,7 @@ div#mc_embed_signup .mc-field-group {
 .product__text {
   padding-right: 120px; }
   .product__text h1 {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 18px; }
   .product__text h3 {
     display: inline-block;
@@ -1650,6 +1650,7 @@ div#mc_embed_signup .mc-field-group {
     margin: 18px 0; }
 
 .product__region .region__display__title {
+  font-size: 18px;
   margin-bottom: 18px; }
 
 .product__region .region__display__description {
