@@ -735,7 +735,7 @@ header.site-header {
   header.site-header .header__salmonberry {
     width: 75%; }
   header.site-header .header__cart img {
-    width: 50%; }
+    width: 25px; }
   header.site-header .header__provisions {
     width: 75%; }
   header.site-header .header__search input[type="text"] {

@@ -51,8 +51,8 @@
                     <div class="header__right__top__left col-4">
                         <a href="https://www.thesalmonberry.fun" target="_blank"><img class="header__salmonberry" src="<?php echo get_template_directory_uri() . '/images/salmonberry.png'; ?>" /></a>
                     </div>
-                    <div class="col-5"></div>
-                    <div class="header__right__top__right col-3">
+                    <div class="col-2"></div>
+                    <div class="header__right__top__right col-6">
                         <a class="header__cart" href="/cart">
                             <img class="cart__icon" src="<?php echo get_template_directory_uri() . '/images/shopping-bag.svg'; ?>" />
                             <div class="cart-item-total middle"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
