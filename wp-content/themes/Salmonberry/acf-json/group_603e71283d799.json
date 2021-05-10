@@ -47,25 +47,6 @@
             "min": "",
             "max": "",
             "return_format": "object"
-        },
-        {
-            "key": "field_603e808c23b29",
-            "label": "Delivery \/ Pickup",
-            "name": "delivery_pickup",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -85,5 +66,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1618411887
+    "modified": 1620669790
 }

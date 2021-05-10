@@ -119,7 +119,10 @@ header.site-header {
 
         .region__display {
             span,
-            a { display: inline-block; }
+            a {
+                display: inline-block;
+                font-family: "Katibeh-Regular";
+            }
         }
 
         #menu__mobile {
@@ -175,7 +178,8 @@ header.site-header {
 .region__display {
     a,
     span {
-        font-size: 13px;
+        font-family: "Katibeh-Regular";
+        font-size: 18px;
     }
 
     a {

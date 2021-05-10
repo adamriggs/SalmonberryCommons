@@ -23,6 +23,11 @@
     src: url("../src/fonts/MyriadPro-Regular.otf");
 }
 
+@font-face {
+    font-family: "Katibeh-Regular";
+    src: url("../src/fonts/Katibeh-Regular.ttf");
+}
+
 $font-fallback: Arial, sans-serif;
 $font-menu: "Druk Medium", $font-fallback;
 

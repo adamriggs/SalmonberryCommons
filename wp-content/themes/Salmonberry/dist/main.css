@@ -18,6 +18,10 @@
   font-family: "MyriadPro-Regular";
   src: url("../src/fonts/MyriadPro-Regular.otf"); }
 
+@font-face {
+  font-family: "Katibeh-Regular";
+  src: url("../src/fonts/Katibeh-Regular.ttf"); }
+
 html,
 body,
 div,
@@ -788,7 +792,8 @@ header.site-header {
       max-width: 100%; }
     header.site-header .header__mobile .region__display span,
     header.site-header .header__mobile .region__display a {
-      display: inline-block; }
+      display: inline-block;
+      font-family: "Katibeh-Regular"; }
     header.site-header .header__mobile #menu__mobile {
       -webkit-box-shadow: 0 2px 5px 0 #888;
               box-shadow: 0 2px 5px 0 #888;
@@ -830,7 +835,8 @@ header.site-header {
 
 .region__display a,
 .region__display span {
-  font-size: 13px; }
+  font-family: "Katibeh-Regular";
+  font-size: 18px; }
 
 .region__display a {
   display: block;
