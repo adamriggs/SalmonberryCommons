@@ -802,7 +802,8 @@ header.site-header {
     header.site-header .header__mobile .region__display span,
     header.site-header .header__mobile .region__display a {
       display: inline-block;
-      font-family: "Katibeh-Regular"; }
+      font-family: "Katibeh-Regular";
+      text-transform: uppercase; }
     header.site-header .header__mobile #menu__mobile {
       -webkit-box-shadow: 0 2px 5px 0 #888;
               box-shadow: 0 2px 5px 0 #888;
@@ -845,7 +846,8 @@ header.site-header {
 .region__display a,
 .region__display span {
   font-family: "Katibeh-Regular";
-  font-size: 18px; }
+  font-size: 18px;
+  text-transform: uppercase; }
 
 .region__display a {
   display: block;
@@ -853,7 +855,7 @@ header.site-header {
 
 .region__display span {
   display: block;
-  text-transform: capitalize; }
+  text-transform: uppercase; }
 
 .region__selection {
   background-color: rgba(255, 255, 255, 0.8);
