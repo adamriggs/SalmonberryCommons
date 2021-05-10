@@ -40,7 +40,7 @@
                         $producers = get_field('producers');
 
                         // echo('<pre>');
-                        // print_r($regions);
+                        // print_r($product['description']);
                         // echo('</pre>');
                     ?>
                     
@@ -89,7 +89,8 @@
                             </span>
                         </div>
 
-                        <?php the_content(); ?>
+                        <?php // the_content(); ?>
+                        <?php echo apply_filters('the_content', get_the_content()); ?>
 
                         <div class="product__region">
 

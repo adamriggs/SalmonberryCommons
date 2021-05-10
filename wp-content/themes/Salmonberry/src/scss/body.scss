@@ -177,6 +177,18 @@ a {
     }
 }
 
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {
+    margin: 0 0 $spacer-less $spacer-less;
+}   
+
 section {
     margin: $spacer-less 0 0 0;
 }

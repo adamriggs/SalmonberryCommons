@@ -549,6 +549,15 @@ a {
   a:hover h4 {
     color: #f38134; }
 
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li {
+  margin: 0 0 18px 18px; }
+
 section {
   margin: 18px 0 0 0; }
 
@@ -917,6 +926,11 @@ header.site-header {
     color: #f38134; }
   .menu a:hover {
     color: #f38134; }
+
+.menu ol li,
+.menu ul li {
+  display: inline-block;
+  margin: 0; }
 
 .header__menu__secondary {
   z-index: 10; }
@@ -1648,7 +1662,7 @@ div#mc_embed_signup .mc-field-group {
   padding-right: 120px; }
   .product__text h1 {
     font-size: 28px;
-    margin-bottom: 18px; }
+    margin: 18px 0; }
   .product__text h3 {
     display: inline-block;
     margin: 18px 0; }
