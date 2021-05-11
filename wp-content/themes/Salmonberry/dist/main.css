@@ -765,6 +765,15 @@ header.site-header {
     cursor: pointer;
     fill: #fff;
     width: 18px; }
+  header.site-header .header__orderby {
+    font-family: "Katibeh-Regular";
+    font-size: 20px;
+    line-height: 14px;
+    text-transform: uppercase;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s; }
+    header.site-header .header__orderby.hide {
+      opacity: 0; }
   header.site-header .header__menu__secondary {
     margin-bottom: 13px;
     padding: 0;

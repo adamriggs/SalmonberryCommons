@@ -71,7 +71,8 @@
                     </div>
                     <div class="col-2"></div>
                     <div class="header__right__bottom__right col-6">
-                        <img class="header__provisions" src="<?php echo get_template_directory_uri() . '/images/quality-provisions.svg'; ?>" />
+                        <!-- <img class="header__provisions" src="<?php echo get_template_directory_uri() . '/images/quality-provisions.svg'; ?>" /> -->
+                        <div class="header__orderby">Order by Midnight Sunday</div>
                     </div>
                 </div>
             </div>

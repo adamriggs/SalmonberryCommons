@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-lonely-if */
-/* eslint-disable no-console */
 /* eslint-disable no-loop-func */
 import 'intersection-observer';
 import anime from 'animejs/lib/anime.es.js';
@@ -74,12 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchButton = document.getElementsByClassName('search__button');
     const searchInput = document.getElementsByClassName('search__input');
     const mobileCart = document.querySelector('div#menu__mobile a.header__cart');
+    const orderby = document.querySelector('.header__orderby');
     const urlParams = new URLSearchParams(window.location.search);
     const searchTerm = urlParams.get('s');
     Array.from(searchButton).forEach((element)=> {
         element.addEventListener('click', () => {
             let searchArea = element.classList.contains('search__header') ? 'search__header' : 'search__footer';
             mobileCart.classList.toggle('show');
+            orderby.classList.toggle('hide');
             Array.from(searchInput).forEach((input)=> {
                 input.classList.toggle('show');
                 input.focus();

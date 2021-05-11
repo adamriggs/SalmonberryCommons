@@ -73,6 +73,18 @@ header.site-header {
         }
     }
 
+    .header__orderby {
+        font-family: "Katibeh-Regular";
+        font-size: 20px;
+        line-height: 14px;
+        text-transform: uppercase;
+        transition: opacity $transition-time;
+
+        &.hide {
+            opacity: 0;
+        }
+    }
+
     .header__menu__secondary {
         margin-bottom: 13px;
         padding: 0;
