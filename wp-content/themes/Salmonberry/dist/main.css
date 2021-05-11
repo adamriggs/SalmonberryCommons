@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Avenir Next Condensed";
-  src: url("../src/fonts/Avenir Next Condensed.ttc"); }
+  font-family: "Avenir";
+  src: url("../src/fonts/NunitoSans-Regular.ttf"); }
 
 @font-face {
-  font-family: "Avenir";
-  src: url("../src/fonts/Avenir.ttc"); }
+  font-family: "Avenir Italic";
+  src: url("../src/fonts/NunitoSans-Italic.ttf"); }
 
 @font-face {
   font-family: "Barlow-Extra Bold";
@@ -560,6 +560,9 @@ li {
 
 section {
   margin: 18px 0 0 0; }
+
+em {
+  font-family: "Avenir Italic"; }
 
 button,
 .button,
