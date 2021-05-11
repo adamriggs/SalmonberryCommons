@@ -815,6 +815,7 @@ header.site-header {
     header.site-header .header__mobile .region__display a {
       display: inline-block;
       font-family: "Katibeh-Regular";
+      line-height: 14px;
       text-transform: uppercase; }
     header.site-header .header__mobile #menu__mobile {
       -webkit-box-shadow: 0 2px 5px 0 #888;
