@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // REGION STUFF
     const cookieName = 'salmonberry_region';
     const regionDialog = document.getElementsByClassName('region__selection');
+    const regionDelay = 5000;
     const regionButtons = document.getElementsByClassName('region__option__button');
     const regionDisplay = document.getElementsByClassName('region__display');
     const regionDisplayText = document.getElementsByClassName('region__display__text');
@@ -127,10 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // load region from cookie, if any
     if (region === '') {
-        for (let dialog of regionDialog) {
-            dialog.classList.remove('hide');
-            dialog.classList.remove('remove');
-        }
+        setTimeout(()=> {
+            for (let dialog of regionDialog) {
+                dialog.classList.remove('remove');
+                dialog.classList.remove('hide');
+            }
+        }, regionDelay);
     } else {
         displayRegion();
     }

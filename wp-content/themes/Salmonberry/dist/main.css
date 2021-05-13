@@ -874,18 +874,19 @@ header.site-header {
 .region__selection {
   background-color: rgba(255, 255, 255, 0.8);
   color: #f38134;
-  position: absolute;
-  top: 0;
   height: 100vh;
-  -webkit-transition: opacity 0.25s;
-  transition: opacity 0.25s;
   max-width: 1200px;
+  opacity: 1;
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
   width: 100%;
   z-index: 9; }
   .region__selection .region__selection__container {
     background-color: #fff;
     border: 1px solid #4e81c2;
-    margin-top: 20vh;
     padding: 18px; }
   .region__selection .region__option {
     border: 1px solid #f38134;
