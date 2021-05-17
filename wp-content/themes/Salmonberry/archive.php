@@ -6,7 +6,6 @@ get_header(); ?>
 
 <div id="container">
     <div id="content" role="main">
-        archive
 
         <?php the_post(); ?>
         <h1 class="entry-title"><?php the_title(); ?></h1>

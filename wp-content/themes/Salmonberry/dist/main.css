@@ -515,6 +515,8 @@ h5 {
     font-weight: 800;
     text-align: center;
     text-transform: uppercase; }
+  h5.orange {
+    color: #f38134; }
 
 p,
 a {
@@ -1723,6 +1725,9 @@ div#mc_embed_signup .mc-field-group {
     margin: 18px 0; }
   .product__text .hr {
     margin: 18px 0; }
+  .product__text .ltr strong,
+  .product__text .rtl strong {
+    font-weight: 800; }
 
 .product__region .region__display__title {
   font-size: 18px;

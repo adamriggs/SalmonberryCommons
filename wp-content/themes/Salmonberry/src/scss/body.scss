@@ -134,6 +134,10 @@ h5 {
         text-align: center;
         text-transform: uppercase;
     }
+
+    &.orange {
+        color: $orange;
+    }
 }
 
 p,

@@ -89,6 +89,11 @@
     }
 
     .hr { margin: $spacer-less 0; }
+
+    .ltr,
+    .rtl {
+        strong { font-weight: 800; }
+    }
 }
 
 .product__region {
