@@ -92,42 +92,6 @@
                         <?php // the_content(); ?>
                         <?php echo apply_filters('the_content', get_the_content()); ?>
 
-                        <div class="product__region">
-
-                            <h1>Delivery / Pickup</h1>
-                            <?php
-
-                                $zone = $_COOKIE['salmonberry_region'];
-
-                                // echo('<pre>');
-                                // print_r($zone);
-                                // echo('</pre>');
-
-                                $args = array(
-                                    'post_type'        => 'delivery-regions',
-                                    'name'             => $zone
-                                );
-
-                                $query = new WP_Query( $args ); 
-                                if ( $query->have_posts() ) {
-                                    while ( $query->have_posts() ) {
-                                        $query->the_post(); 
-
-                                        echo '<div class="region__display__title">';
-                                        the_title();
-                                        echo '</div>';
-                                        echo '<div class="region__display__description">';
-                                        the_content();
-                                        echo '</div>';
-                                        echo '<a class="region__display__change">Wrong Area? Click here.</a>';
-
-                                    } // end while
-                                } // end if
-                                wp_reset_query();
-                            ?>
-                        </div>
-
-
                         <?php if($producers && count($producers) > 0) { ?>
                             <div class="hr orange"></div>
                             <div class="product__text__producers">
