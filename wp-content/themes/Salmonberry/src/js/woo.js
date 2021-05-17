@@ -3,7 +3,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 import {sendAJAX} from './helpers.js';
-import { getCookie } from './helpers.js';
+// import { getCookie } from './helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const removeOneButton = document.getElementsByClassName('remove-one-item');
@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function checkRegion() {
-    const region = getCookie('salmonberry_region');
+    // const region = getCookie('salmonberry_region');
     const regionDialog = document.getElementsByClassName('region__selection');
 
-    if (region === '') {
-        for (let dialog of regionDialog) {
-            dialog.classList.remove('remove');
-            dialog.classList.remove('hide');
-        }
+    // if (region === '') {
+    for (let dialog of regionDialog) {
+        dialog.classList.remove('remove');
+        dialog.classList.remove('hide');
     }
+    // }
 }
 
 function addItem(productId) {
