@@ -50,9 +50,6 @@
                     
                     <div class="product__text col-6">
                         <h1><?php the_title(); ?></h1>
-                        <?php if($quantity) { ?>
-                            <div><h3 class="blue"><?php echo $quantity; ?></h3></div>
-                        <?php } ?>
 
                         <?php if($producers && count($producers) > 0) { ?>
                             <div><p>Featuring Ingredients From 
@@ -69,6 +66,9 @@
                         <?php } ?>
 
                         <h3 class="blue"><?php echo '$' . $product->get_price(); ?></h3><span>&nbsp each</span>
+                        <?php if($quantity) { ?>
+                            <div class="product__text__quantity"><h3 class="blue"><?php echo $quantity; ?></h3></div>
+                        <?php } ?>
 
                         <div class="product__text__add row middle">
                             <button class="add-one-item <?php echo $product_status; ?>" data-product-id="<?php echo $product_id; ?>" data-cart-item-key="<?php echo $cart_item_key; ?>" data-cart-item-quantity="<?php echo $cart_item_quantity; ?>"><?php echo $button_text; ?></button>
