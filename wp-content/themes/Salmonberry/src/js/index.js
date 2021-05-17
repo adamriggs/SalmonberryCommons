@@ -139,23 +139,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // load region from cookie, if any
-    // if (region !== '') {
-    //     displayRegion();
-    // }
+    if (region !== '') {
+        // displayRegion();
+    }
 
     // set region cookie based on button click
-    // for (let button of regionButtons) {
-    //     button.addEventListener('click', () => {
-    //         region = button.dataset.region;
-    //         if (setCookie('salmonberry_region', button.dataset.region, 30)) {
-    //             for (let dialog of regionDialog) {
-    //                 dialog.classList.add('hide');
-    //             }
-    //             // displayRegion();
-    //             location.reload();
-    //         }
-    //     });
-    // }
+    for (let button of regionButtons) {
+        button.addEventListener('click', () => {
+            // region = button.dataset.region;
+            setCookie('salmonberry_region', 'viewed', 30);
+            // if (setCookie('salmonberry_region', 'veiwed', 30)) {
+            //     for (let dialog of regionDialog) {
+            //         dialog.classList.add('remove');
+            //     }
+            //     // displayRegion();
+            //     location.reload();
+            // }
+        });
+    }
 
     // change the region at user request
     // for (let change of regionChange) {
