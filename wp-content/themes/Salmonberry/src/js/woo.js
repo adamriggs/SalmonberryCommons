@@ -3,6 +3,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 import {sendAJAX} from './helpers.js';
+import { getCookie } from './helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const removeOneButton = document.getElementsByClassName('remove-one-item');
@@ -34,8 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function checkRegion() {
+    const region = getCookie('salmonberry_region');
+    const regionDialog = document.getElementsByClassName('region__selection');
+
+    if (region === '') {
+        for (let dialog of regionDialog) {
+            dialog.classList.remove('remove');
+            dialog.classList.remove('hide');
+        }
+    }
+}
+
 function addItem(productId) {
-    // console.log('addItem()');
+    checkRegion();
     const addSuccess = document.getElementsByClassName('product__text__add__success');
     const addProgress = document.querySelector('*.product__text__add__progress[data-product-id="' + productId + '"]');
 
@@ -46,9 +59,7 @@ function addItem(productId) {
     }
 
     if (addProgress) {
-        // for (let progress of addProgress) {
         addProgress.classList.add('show');
-        // }
     }
 
     const data = {
@@ -56,14 +67,13 @@ function addItem(productId) {
         'product_id': productId,
         'product_sku': '',
         'quantity': '1'
-        // 'variation_id': variation_id
     };
 
     sendAJAX(ajax_data.ajax_url, data, updateItemSuccess);
 }
 
 function updateItem(hash, qty) {
-    // console.log('updateItems()');
+    checkRegion();
     const data = {
         'action': 'salmonberry_update_cart',
         'hash': hash,

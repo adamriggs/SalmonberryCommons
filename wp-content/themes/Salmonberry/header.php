@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="region__display">
-                <span class="region__display__text">Delivery Zone: At Large</span>
+                <span class="region__display__text">Delivery Zone: Not Set</span>
                 <a href="" class="region__display__change">Change</a>
             </div>
         </div>
