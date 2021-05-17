@@ -66,6 +66,10 @@ h1 {
     font-size: 36px;
     text-transform: uppercase;
     transition: color $transition-time ease-in-out;
+
+    &.orange {
+        color: $orange;
+    }
 }
 
 h2 {
@@ -74,6 +78,10 @@ h2 {
     font-size: 36px;
     text-transform: uppercase;
     transition: color $transition-time ease-in-out;
+
+    &.blue {
+        color: $blue;
+    }
 }
 
 h3 {

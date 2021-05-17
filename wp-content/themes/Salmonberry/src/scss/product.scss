@@ -322,6 +322,14 @@
     .product__text {
         padding: 0 $spacer-less;
     }
+
+    .product__region {
+        .col-1,
+        .col-5,
+        .col-6 {
+            @include flex__full;
+        }
+    }
 }
 
 @media only screen and (max-width: $mobile-break) {

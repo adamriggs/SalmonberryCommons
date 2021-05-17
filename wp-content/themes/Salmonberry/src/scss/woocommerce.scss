@@ -91,3 +91,13 @@
 .woocommerce-privacy-policy-text {
     margin-bottom: $spacer-less;
 }
+
+.woocommerce .cart-collaterals,
+.woocommerce-page .cart-collaterals {
+    width: auto;
+}
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+    width: auto;
+}

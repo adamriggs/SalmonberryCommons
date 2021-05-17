@@ -193,8 +193,9 @@ header.site-header {
     a,
     span {
         font-family: "Katibeh-Regular";
-        font-size: 18px;
-        line-height: 14px;
+        font-size: 22px;
+        line-height: 18px;
+        margin-top: $spacer-less;
         text-transform: uppercase;
     }
 
@@ -258,6 +259,40 @@ header.site-header {
 
     &.remove {
         display: none;
+    }
+}
+
+.popup__overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $orange;
+    height: 100vh;
+    // left: 0;
+    max-width: $max-width;
+    opacity: 1;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    transition: opacity 1s;
+    width: 100%;
+    z-index: 9;
+
+    &.hide {
+        opacity: 0;
+    }
+
+    &.remove {
+        display: none;
+    }
+
+    .popup__overlay__close {
+        background-color: $white;
+        color: $black;
+        cursor: pointer;
+        font-size: 32px;
+    }
+
+    .popup__overlay__content {
+        img { max-height: 90vh; }
     }
 }
 

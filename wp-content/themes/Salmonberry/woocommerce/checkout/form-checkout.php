@@ -48,6 +48,26 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
+
+	<?php 
+		// // Loop through shipping packages from WC_Session (They can be multiple in some cases)
+		// echo 'fart';
+		// foreach ( WC()->cart->get_shipping_packages() as $package_id => $package ) {
+		//     // Check if a shipping for the current package exist
+		//     if ( WC()->session->__isset( 'shipping_for_package_'.$package_id ) ) {
+		//         // Loop through shipping rates for the current package
+		//         foreach ( WC()->session->get( 'shipping_for_package_'.$package_id )['rates'] as $shipping_rate_id => $shipping_rate ) {
+		//             $rate_id     = $shipping_rate->get_id(); // same thing that $shipping_rate_id variable (combination of the shipping method and instance ID)
+		//             $method_id   = $shipping_rate->get_method_id(); // The shipping method slug
+		//             $instance_id = $shipping_rate->get_instance_id(); // The instance ID
+		//             $label_name  = $shipping_rate->get_label(); // The label name of the method
+		//             $cost        = $shipping_rate->get_cost(); // The cost without tax
+		//             $tax_cost    = $shipping_rate->get_shipping_tax(); // The tax cost
+		//             $taxes       = $shipping_rate->get_taxes(); // The taxes details (array)
+		//         }
+		//     }
+		// }
+	?>
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 	

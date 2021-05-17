@@ -114,61 +114,86 @@ document.addEventListener('DOMContentLoaded', () => {
     const regionDisplay = document.getElementsByClassName('region__display');
     const regionDisplayText = document.getElementsByClassName('region__display__text');
     const regionChange = document.getElementsByClassName('region__display__change');
+    const regionClose = document.getElementsByClassName('region__option__button');
     let region = getCookie(cookieName);
+
+    for (let close of regionClose) {
+        close.addEventListener('click', ()=> {
+            for (let dialog of regionDialog) {
+                // dialog.addEventListener('transitionend', () => {
+                //     if (dialog.classList.contains('hide')) {
+                dialog.classList.add('remove');
+                //     }
+                // });
+            }
+        });
+    }
 
     // set up event for removing region dialog from the screen
     for (let dialog of regionDialog) {
         dialog.addEventListener('transitionend', () => {
-            if (dialog.classList.contains('hide')) {
-                dialog.classList.add('remove');
+            if (dialog.classList.contains('remove')) {
+                dialog.classList.add('hide');
             }
         });
     }
 
     // load region from cookie, if any
-    if (region === '') {
-        // for (let dialog of regionDialog) {
-        //     dialog.classList.remove('remove');
-        //     dialog.classList.remove('hide');
-        // }
-    } else {
-        displayRegion();
-    }
+    // if (region !== '') {
+    //     displayRegion();
+    // }
 
     // set region cookie based on button click
-    for (let button of regionButtons) {
-        button.addEventListener('click', () => {
-            region = button.dataset.region;
-            if (setCookie('salmonberry_region', button.dataset.region, 30)) {
-                for (let dialog of regionDialog) {
-                    dialog.classList.add('hide');
-                }
-                displayRegion();
-                location.reload();
-            }
-        });
-    }
+    // for (let button of regionButtons) {
+    //     button.addEventListener('click', () => {
+    //         region = button.dataset.region;
+    //         if (setCookie('salmonberry_region', button.dataset.region, 30)) {
+    //             for (let dialog of regionDialog) {
+    //                 dialog.classList.add('hide');
+    //             }
+    //             // displayRegion();
+    //             location.reload();
+    //         }
+    //     });
+    // }
 
     // change the region at user request
-    for (let change of regionChange) {
-        change.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
+    // for (let change of regionChange) {
+    //     change.addEventListener('click', (e) => {
+    //         e.preventDefault();
+    //         e.stopPropagation();
 
-            for (let dialog of regionDialog) {
-                dialog.classList.remove('remove');
-                dialog.classList.remove('hide');
-            }
-        });
-    }
+    //         for (let dialog of regionDialog) {
+    //             dialog.classList.remove('remove');
+    //             dialog.classList.remove('hide');
+    //         }
+    //     });
+    // }
 
-    function displayRegion() {
-        for (let display of regionDisplayText) {
-            const str = region.split('-').join('\xa0');
-            const textNode = document.createTextNode('Delivery Zone: ' + str);
-            display.innerHTML = '';
-            display.prepend(textNode);
-        }
+    // function displayRegion() {
+    //     for (let display of regionDisplayText) {
+    //         const str = region.split('-').join('\xa0');
+    //         const textNode = document.createTextNode('Delivery Zone: ' + str);
+    //         display.innerHTML = '';
+    //         display.prepend(textNode);
+    //     }
+    // }
+
+    // ANNOUNCEMENT POP UP
+    const popup = document.querySelector('.popup__overlay');
+    const popupClose = document.querySelector('.popup__overlay__close');
+    const popupDelay = 5000;
+
+    popupClose.addEventListener('click', () => {
+        popup.classList.add('hide');
+        popup.classList.add('remove');
+    });
+
+    // setTimeout(showPopup, popupDelay);
+
+    function showPopup() {
+        popup.classList.remove('hide');
+        popup.classList.remove('remove');
     }
 
     // PRODUCT TILE IMAGE SIZING

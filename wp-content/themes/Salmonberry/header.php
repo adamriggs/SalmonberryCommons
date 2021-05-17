@@ -28,8 +28,8 @@
             <div class="header__left col-2 middle">
                 <img src="<?php echo get_template_directory_uri() . '/images/sun-white.png'; ?>" />
                 <div class="region__display">
-                    <span class="region__display__text">Delivery Zone: At Large</span>
-                    <a href="" class="region__display__change">Change</a>
+                    <span class="region__display__text">Quality Provisions</span>
+                    <!-- <a href="" class="region__display__change">Change</a> -->
                 </div>
             </div>
             <div class="header__middle header__menu row col-8 middle">
@@ -107,15 +107,15 @@
                 </div>
             </div>
             <div class="region__display">
-                <span class="region__display__text">Delivery Zone: Not Set</span>
-                <a href="" class="region__display__change">Change</a>
+                <span class="region__display__text">Quality Provisions</span>
+                <!-- <a href="" class="region__display__change">Change</a> -->
             </div>
         </div>
 
         <div class="region__selection hide remove">
             <div class="region__selection__container row center">
                 <div class="region__selection__title">
-                    <h1>Where are you located?</h1>
+                    <h1>Delivery Zones</h1>
                 </div>
                 <section class="row center">
                     <?php
@@ -140,7 +140,7 @@
                                 <?php the_content(); ?>
                             </div>
                             <div class="region__option__button__container">
-                                <button data-region="<?php echo $post->post_name; ?>" class="region__option__button">Choose</button>
+                                <!-- <button data-region="<?php echo $post->post_name; ?>" class="region__option__button">Choose</button> -->
                             </div>
                         </div>
 
@@ -150,6 +150,14 @@
                         wp_reset_query();
                     ?>
                 </section>
+                <div class="row center"><button class="region__option__button">Ok</button></div>
+            </div>
+        </div>
+
+        <div class="popup__overlay hide remove">
+            <div class="popup__overlay__wrapper">
+                <div class="popup__overlay__close row end">✖</div>
+                <a class="popup__overlay__content" href="https://thesalmonberry.fun"><img src="<?php echo get_template_directory_uri() . '/images/thesalmonberry.jpg'; ?>" /></a>
             </div>
         </div>
     </header>

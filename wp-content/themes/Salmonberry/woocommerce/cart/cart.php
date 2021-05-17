@@ -159,51 +159,56 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
-<div class="product__region">
-	<?php
+<div class="product__region row">
 
-	    $zone = $_COOKIE['salmonberry_region'];
+	<div class="col-6">
+		<h1 class="orange">Delivery Regions</h1>
+		<?php
 
-	    // echo('<pre>');
-	    // print_r($zone);
-	    // echo('</pre>');
+		    // $zone = $_COOKIE['salmonberry_region'];
 
-	    $args = array(
-	        'post_type'        => 'delivery-regions',
-	        'name'             => $zone
-	    );
+		    // echo('<pre>');
+		    // print_r($zone);
+		    // echo('</pre>');
 
-	    $query = new WP_Query( $args ); 
-	    if ( $query->have_posts() ) {
-	        while ( $query->have_posts() ) {
-	            $query->the_post(); 
+		    $args = array(
+		        'post_type'        => 'delivery-regions',
+		        // 'name'             => $zone
+		    );
 
-	            echo '<div class="region__display__title"><h1>';
-	            the_title();
-	            echo '</h1></div>';
-	            echo '<div class="region__display__description"><p>';
-	            the_content();
-	            echo '</p></div>';
-	            echo '<a class="region__display__change">Wrong Area? Click here.</a>';
+		    $query = new WP_Query( $args ); 
+		    if ( $query->have_posts() ) {
+		        while ( $query->have_posts() ) {
+		            $query->the_post(); 
 
-	        } // end while
-	    } // end if
-	    wp_reset_query();
-	?>
-</div>
+		            echo '<div class="region__display__title"><h3 class="blue">';
+		            the_title();
+		            echo '</h3></div>';
+		            echo '<div class="region__display__description">';
+		            the_content();
+		            echo '</div>';
+		            // echo '<a class="region__display__change">Wrong Area? Click here.</a>';
 
-<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
-
-<div class="cart-collaterals">
-	<?php
-		/**
-		 * Cart collaterals hook.
-		 *
-		 * @hooked woocommerce_cross_sell_display
-		 * @hooked woocommerce_cart_totals - 10
-		 */
-		do_action( 'woocommerce_cart_collaterals' );
-	?>
+		        } // end while
+		    } // end if
+		    wp_reset_query();
+		?>
+	</div>
+	<div class="col-1"></div>
+	<div class="col-5">
+		<?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
+		<div class="cart-collaterals">
+			<?php
+				/**
+				 * Cart collaterals hook.
+				 *
+				 * @hooked woocommerce_cross_sell_display
+				 * @hooked woocommerce_cart_totals - 10
+				 */
+				do_action( 'woocommerce_cart_collaterals' );
+			?>
+		</div>
+	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
