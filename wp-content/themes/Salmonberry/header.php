@@ -154,11 +154,28 @@
             </div>
         </div>
 
+        <?php
+            $popup = get_field('popup', 'option');
+            $popup_image = $popup['image']['url'];
+            $popup_link = $popup['link'];
+            $popup_show = $popup['show'];
+
+            // echo('<pre>');
+            // print_r($popup_show);
+            // echo('</pre>');
+
+            if ($popup_show == 1) {
+        ?>
+
         <div class="popup__overlay hide remove">
             <div class="popup__overlay__wrapper">
                 <div class="popup__overlay__close row end">✖</div>
-                <a class="popup__overlay__content" href="https://thesalmonberry.fun"><img src="<?php echo get_template_directory_uri() . '/images/thesalmonberry.jpg'; ?>" /></a>
+                <a class="popup__overlay__content" href="<?php echo $popup_link; ?>"><img src="<?php echo $popup_image; ?>" /></a>
             </div>
         </div>
+
+        <?php 
+            }
+        ?>
     </header>
     

@@ -184,17 +184,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const popup = document.querySelector('.popup__overlay');
     const popupClose = document.querySelector('.popup__overlay__close');
     const popupDelay = 5000;
+    let popupCookie = getCookie('salmonberry_popup');
 
     popupClose.addEventListener('click', () => {
         popup.classList.add('hide');
         popup.classList.add('remove');
     });
 
-    // setTimeout(showPopup, popupDelay);
+    if (popupCookie !== 'viewed') {
+        setTimeout(showPopup, popupDelay);
+    }
 
     function showPopup() {
         popup.classList.remove('hide');
         popup.classList.remove('remove');
+        setCookie('salmonberry_popup', 'viewed', 7);
     }
 
     // PRODUCT TILE IMAGE SIZING
