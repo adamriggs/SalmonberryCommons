@@ -284,6 +284,11 @@ header.site-header {
         display: none;
     }
 
+    .popup__overlay__wrapper {
+        position: absolute;
+        top: 30px;
+    }
+
     .popup__overlay__close {
         background-color: $white;
         color: $black;

@@ -940,6 +940,9 @@ header.site-header {
     opacity: 0; }
   .popup__overlay.remove {
     display: none; }
+  .popup__overlay .popup__overlay__wrapper {
+    position: absolute;
+    top: 30px; }
   .popup__overlay .popup__overlay__close {
     background-color: #fff;
     color: #000;
