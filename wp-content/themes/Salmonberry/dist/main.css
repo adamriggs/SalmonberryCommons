@@ -573,6 +573,9 @@ section {
 em {
   font-family: "Avenir Italic"; }
 
+.js .tmce-active .wp-editor-area {
+  color: inherit; }
+
 button,
 .button,
 #mc_embed_signup form .button,
@@ -1380,6 +1383,9 @@ div#mc_embed_signup .mc-field-group {
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
   width: auto; }
+
+.js .tmce-active .wp-editor-area {
+  color: auto; }
 
 .featured h4 {
   margin: 18px 0 24px; }
