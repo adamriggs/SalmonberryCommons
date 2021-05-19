@@ -3,6 +3,25 @@
     "title": "Theme Settings",
     "fields": [
         {
+            "key": "field_60a576cb67a0e",
+            "label": "Email",
+            "name": "email",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_600a20e94b662",
             "label": "Social Links",
             "name": "social_links",
@@ -199,5 +218,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1621349387
+    "modified": 1621456598
 }

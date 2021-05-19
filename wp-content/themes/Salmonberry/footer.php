@@ -1,5 +1,5 @@
 <?php
-    
+    $email = get_field('email', 'option');
 ?>
     <footer class="row">
 
@@ -29,7 +29,7 @@
                 <div class="row middle">
                     <div class="col-2 start"><h2>Help</h2></div>
                     <div class="footer__arrow col-3 row middle"><img class="footer__arrow arrow__right center" src="<?php echo get_template_directory_uri() . '/images/arrow-right.svg' ?>"></div>
-                    <div class="footer__email col-7 end"><a href="mailto:hello@salmonberrycommons.com">Customer service: hello@salmonberrycommons.com</a></div>
+                    <div class="footer__email col-7 end"><a href="mailto:<?php echo $email; ?>">Customer service: <?php echo $email; ?></a></div>
                     <div class="menu row middle footer__row2">
                         <div class="col-10">
                             <?php 
