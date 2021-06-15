@@ -20,7 +20,7 @@
                 <?php
                     } else {
                 ?>
-                    <img src="<?php echo get_template_directory_uri() . '/images/logo-tall.svg'; ?>">
+                    <img src="<?php echo get_template_directory_uri() . '/images/logo-tall.png'; ?>">
                 <?php 
                     }
                 ?>
