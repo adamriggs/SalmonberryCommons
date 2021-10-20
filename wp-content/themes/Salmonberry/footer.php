@@ -21,7 +21,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-12 footer__row2 footer__longtext start"><h2>Salmonberry Commons</h2></div>
+                    <div class="col-12 footer__row2 footer__longtext start"><h2>North Coast Commons</h2></div>
                 </div>
             </div>
 
